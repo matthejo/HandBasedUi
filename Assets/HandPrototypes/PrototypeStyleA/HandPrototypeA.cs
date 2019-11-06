@@ -7,25 +7,31 @@ public class HandPrototypeA : MonoBehaviour
 {
     public static HandPrototypeA Instance;
 
+    public float HoverDist = .2f;
+    public float FingerRadius = 0.03f;
+
     private HandPrototypeProxies proxies;
     [Range(0, 1)]
     public float PalmSummonThreshold;
     [Range(0, 1)]
     public float PalmDismissThreshold;
 
+    public RadialItemSet MainSet;
+    public RadialItemSet ToolsSet;
+    public HorizontalItemSet PanelsSet;
+
+    public MenuItemButton ToolsButton;
+    public MenuItemButton PanelsButton;
+
+    public AudioSource ButtonPressSound;
+    public AudioSource ButtonReleaseSound;
+
     public float Radius;
     public float Smoothing;
-
-    public FingerBoundItem VideoItem;
-    public FingerBoundItem CallControlsItem;
-    public FingerBoundItem ToolsItem;
-    public FingerBoundItem WindowsItem;
 
     public float SummonTime;
     private float currentSummonTime;
     public float Summonedness { get; private set; }
-
-    private FingerBoundItem[] items;
 
     private Transform psuedoPalm;
     public Transform EffectivePalm { get; private set; }
@@ -42,19 +48,6 @@ public class HandPrototypeA : MonoBehaviour
 
     public void OnToolsPressed()
     {
-        if(State == UiState.BrowsingTools)
-        {
-            State = UiState.Summoned;
-        }
-        else
-        {
-            State = UiState.BrowsingTools;
-        }
-    }
-
-    public void OnWindowsPressed()
-    {
-        State = UiState.BrowsingWindows;
     }
 
     private void Awake()
@@ -67,31 +60,52 @@ public class HandPrototypeA : MonoBehaviour
         psuedoPalm = new GameObject("PsuedoPalm").transform;
         EffectivePalm = psuedoPalm;
         proxies = HandPrototypeProxies.Instance;
-        items = new FingerBoundItem[] { VideoItem, CallControlsItem, ToolsItem, WindowsItem };
+        ToolsButton.Released += OnToolsButtonReleased;
+        PanelsButton.Released += OnPanelsButtonReleased;
+    }
+
+    private void OnPanelsButtonReleased(object sender, EventArgs e)
+    {
+        if (State == UiState.BrowsingWindows)
+        {
+            State = UiState.Summoned;
+        }
+        else
+        {
+            State = UiState.BrowsingWindows;
+        }
+    }
+
+    private void OnToolsButtonReleased(object sender, EventArgs e)
+    {
+        if (State == UiState.BrowsingTools)
+        {
+            State = UiState.Summoned;
+        }
+        else
+        {
+            State = UiState.BrowsingTools;
+        }
+    }
+
+    internal void OnAnyButtonPress()
+    {
+        ButtonPressSound.Play();
+    }
+
+    internal void OnAnyButtonRelease()
+    {
+        ButtonReleaseSound.Play();
     }
 
     private void Update()
     {
         UpdatePsuedoPalm();
         UpdatePrimaryVisibility();
-        UpdateSummonness();
-        VideoItem.DoItemUpdate(proxies.LeftIndex, proxies.LeftIndexKnuckle);
-        CallControlsItem.DoItemUpdate(proxies.LeftMiddle, proxies.LeftMiddleKnuckle);
-        WindowsItem.DoItemUpdate(proxies.LeftRing, proxies.LeftRingKnuckle);
-        ToolsItem.DoItemUpdate(proxies.LeftPinky, proxies.LeftPinkyKnuckle);
-    }
-
-    private void UpdateSummonness()
-    {
-        if(State == UiState.Unsummoned)
-        {
-            currentSummonTime -= Time.deltaTime;
-        }else
-        {
-            currentSummonTime += Time.deltaTime;
-        }
-        currentSummonTime = Mathf.Clamp(currentSummonTime, 0, SummonTime);
-        Summonedness = currentSummonTime / SummonTime;
+        
+        MainSet.ShowItems = State != UiState.Unsummoned;
+        ToolsSet.ShowItems = State == UiState.BrowsingTools;
+        PanelsSet.ShowItems = State == UiState.BrowsingWindows;
     }
 
     private void UpdatePsuedoPalm()

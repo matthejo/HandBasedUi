@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrabbableItem : MonoBehaviour
+public class GrabbablePanel : MonoBehaviour
 {
     public BoxCollider Box;
     public GameObject ThumbnailContent;

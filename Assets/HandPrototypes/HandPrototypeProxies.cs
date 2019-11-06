@@ -14,13 +14,9 @@ public class HandPrototypeProxies : MonoBehaviour
     public Transform LeftPalm;
     public Transform LeftThumb;
     public Transform LeftIndex;
-    public Transform LeftIndexKnuckle;
     public Transform LeftMiddle;
-    public Transform LeftMiddleKnuckle;
     public Transform LeftRing;
-    public Transform LeftRingKnuckle;
     public Transform LeftPinky;
-    public Transform LeftPinkyKnuckle;
 
     public Transform RightIndex;
     public Transform RightThumb;
@@ -49,11 +45,6 @@ public class HandPrototypeProxies : MonoBehaviour
         SetTransform(TrackedHandJoint.MiddleTip, LeftMiddle);
         SetTransform(TrackedHandJoint.RingTip, LeftRing);
         SetTransform(TrackedHandJoint.PinkyTip, LeftPinky);
-
-        SetTransform(TrackedHandJoint.IndexKnuckle, LeftIndexKnuckle);
-        SetTransform(TrackedHandJoint.MiddleKnuckle, LeftMiddleKnuckle);
-        SetTransform(TrackedHandJoint.RingKnuckle, LeftRingKnuckle);
-        SetTransform(TrackedHandJoint.PinkyKnuckle, LeftPinkyKnuckle);
         
         SetTransform(TrackedHandJoint.IndexTip, RightIndex, Handedness.Right);
         SetTransform(TrackedHandJoint.ThumbTip, RightThumb, Handedness.Right);
@@ -68,10 +59,6 @@ public class HandPrototypeProxies : MonoBehaviour
             LeftMiddle.GetComponent<MeshRenderer>(),
             LeftRing.GetComponent<MeshRenderer>(),
             LeftPinky.GetComponent<MeshRenderer>(),
-            LeftIndexKnuckle.GetComponent<MeshRenderer>(),
-            LeftMiddleKnuckle.GetComponent<MeshRenderer>(),
-            LeftRingKnuckle.GetComponent<MeshRenderer>(),
-            LeftPinkyKnuckle.GetComponent<MeshRenderer>(),
             RightIndex.GetComponent<MeshRenderer>(),
             RightThumb.GetComponent<MeshRenderer>(),
         };

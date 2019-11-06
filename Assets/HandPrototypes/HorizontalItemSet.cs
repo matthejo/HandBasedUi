@@ -7,6 +7,8 @@ public class HorizontalItemSet : MonoBehaviour
 {
     private float timeShown;
 
+    public bool ShowItems;
+
     public GameObject[] Items;
     private HorizontalItem[] items;
 
@@ -17,8 +19,7 @@ public class HorizontalItemSet : MonoBehaviour
 
     public void Update()
     {
-        bool show = HandPrototypeA.Instance.State == HandPrototypeA.UiState.BrowsingWindows;
-        if(show)
+        if(ShowItems)
         {
             timeShown += Time.deltaTime;
         }

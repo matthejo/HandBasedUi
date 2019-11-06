@@ -9,17 +9,17 @@ public class GrabbableItemsManager : MonoBehaviour
     public float GrabMargin = .1f;
     public static GrabbableItemsManager Instance;
 
-    private List<GrabbableItem> items;
+    private List<GrabbablePanel> items;
 
     private bool wasGrabbing;
-    public GrabbableItem GrabbedItem { get; private set; }
+    public GrabbablePanel GrabbedItem { get; private set; }
 
     public Transform SmoothedGrabPoint { get; private set; }
 
     private void Awake()
     {
         Instance = this;
-        items = new List<GrabbableItem>();
+        items = new List<GrabbablePanel>();
     }
 
     private void Start()
@@ -27,7 +27,7 @@ public class GrabbableItemsManager : MonoBehaviour
         SmoothedGrabPoint = new GameObject("Smoothed Grab Point").transform;
     }
 
-    public void RegisterGrabbableItem(GrabbableItem item)
+    public void RegisterGrabbableItem(GrabbablePanel item)
     {
         items.Add(item);
     }
@@ -72,11 +72,11 @@ public class GrabbableItemsManager : MonoBehaviour
         }
     }
 
-    private GrabbableItem GetGrabbable()
+    private GrabbablePanel GetGrabbable()
     {
         float closestGrabDist = GrabMargin;
-        GrabbableItem ret = null;
-        foreach (GrabbableItem item in items)
+        GrabbablePanel ret = null;
+        foreach (GrabbablePanel item in items)
         {
             if(item.ThumbnailContent.activeInHierarchy)
             {
