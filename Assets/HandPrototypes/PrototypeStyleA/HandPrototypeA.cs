@@ -3,10 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HandPrototypeA : MonoBehaviour
+public class HandPrototypeA : HandPrototype
 {
-    public static HandPrototypeA Instance;
-    
     public float HoverDist = .2f;
     public float FingerRadius = 0.03f;
 
@@ -26,7 +24,6 @@ public class HandPrototypeA : MonoBehaviour
     public AudioSource ButtonReleaseSound;
 
     public float Radius;
-    public float Smoothing;
 
     public float SummonTime;
     private float currentSummonTime;
@@ -40,11 +37,6 @@ public class HandPrototypeA : MonoBehaviour
         Summoned,
         BrowsingTools,
         BrowsingWindows
-    }
-
-    private void Awake()
-    {
-        Instance = this;
     }
 
     private void Start()
@@ -78,12 +70,12 @@ public class HandPrototypeA : MonoBehaviour
         }
     }
 
-    internal void OnAnyButtonPress()
+    public override void OnAnyButtonPress()
     {
         ButtonPressSound.Play();
     }
 
-    internal void OnAnyButtonRelease()
+    public override void OnAnyButtonRelease()
     {
         ButtonReleaseSound.Play();
     }

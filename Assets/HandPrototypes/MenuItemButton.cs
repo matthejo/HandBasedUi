@@ -9,6 +9,8 @@ public class MenuItemButton : MonoBehaviour
     public event EventHandler Pressed;
     public event EventHandler Released;
 
+    public HandPrototype PrototypeManager;
+
     private ButtonState state;
 
     public MeshCollider Backdrop;
@@ -79,7 +81,7 @@ public class MenuItemButton : MonoBehaviour
             if(!IsHoveringUnder())
             {
                 Released?.Invoke(this, EventArgs.Empty);
-                HandPrototypeA.Instance.OnAnyButtonRelease();
+                PrototypeManager.OnAnyButtonRelease();
                 state = ButtonState.Ready;
             }
         }
@@ -88,7 +90,7 @@ public class MenuItemButton : MonoBehaviour
             if (IsHoveringUnder())
             {
                 state = ButtonState.Pressing;
-                HandPrototypeA.Instance.OnAnyButtonPress();
+                PrototypeManager.OnAnyButtonPress();
                 Pressed?.Invoke(this, EventArgs.Empty);
             }
             else if (!IsHoveringOver())

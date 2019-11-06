@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GrabbableItemsManager : MonoBehaviour
 {
+    public HandPrototype Prototype;
     public float GrabRestoreTime;
     public float GrabMargin = .1f;
     public static GrabbableItemsManager Instance;
@@ -53,8 +54,8 @@ public class GrabbableItemsManager : MonoBehaviour
     {
         Vector3 positionTarget = GrabDetector.Instance.GrabPoint.position;
         Quaternion rotationTarget = GrabDetector.Instance.GrabPoint.rotation;
-        SmoothedGrabPoint.position = Vector3.Lerp(positionTarget, SmoothedGrabPoint.position, HandPrototypeA.Instance.Smoothing * Time.deltaTime);
-        SmoothedGrabPoint.rotation = Quaternion.Lerp(rotationTarget, SmoothedGrabPoint.rotation, HandPrototypeA.Instance.Smoothing * Time.deltaTime);
+        SmoothedGrabPoint.position = Vector3.Lerp(positionTarget, SmoothedGrabPoint.position, Prototype.Smoothing * Time.deltaTime);
+        SmoothedGrabPoint.rotation = Quaternion.Lerp(rotationTarget, SmoothedGrabPoint.rotation, Prototype.Smoothing * Time.deltaTime);
     }
 
     private void HandleStopGrabbing()

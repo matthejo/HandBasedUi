@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class GrabbablePanel : MonoBehaviour
 {
+    private Transform originalParent;
+    public GrabbableItemsManager Manager;
     public BoxCollider Box;
     public GameObject ThumbnailContent;
 
@@ -14,6 +16,7 @@ public class GrabbablePanel : MonoBehaviour
 
     void Start()
     {
+        originalParent = transform.parent;
         finalContentScale = transform.localScale;
         GrabbableItemsManager.Instance.RegisterGrabbableItem(this);
     }
@@ -29,15 +32,15 @@ public class GrabbablePanel : MonoBehaviour
     private void UpdateScale()
     {
         timeSinceGrab += Time.deltaTime;
-        timeSinceGrab = Mathf.Clamp(timeSinceGrab, 0, GrabbableItemsManager.Instance.GrabRestoreTime);
-        float grabLerp = timeSinceGrab / GrabbableItemsManager.Instance.GrabRestoreTime;
+        timeSinceGrab = Mathf.Clamp(timeSinceGrab, 0, Manager.GrabRestoreTime);
+        float grabLerp = timeSinceGrab / Manager.GrabRestoreTime;
         transform.localScale = Vector3.Lerp(transform.localScale, finalContentScale, grabLerp);
     }
 
     internal void EndGrab()
     {
         ThumbnailContent.SetActive(true);
-        transform.parent = null;
+        transform.parent = originalParent;
         timeSinceGrab = 0;
     }
 
@@ -49,7 +52,7 @@ public class GrabbablePanel : MonoBehaviour
         transform.localScale = Vector3.one;
 
         ThumbnailContent.SetActive(false);
-        transform.parent = GrabbableItemsManager.Instance.SmoothedGrabPoint;
+        transform.parent = Manager.SmoothedGrabPoint;
     }
 
     public float GetDistanceToGrab()

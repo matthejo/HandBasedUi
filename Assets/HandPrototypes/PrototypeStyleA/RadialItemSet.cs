@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RadialItemSet : MonoBehaviour
 {
+    public HandPrototypeA Prototype;
+
     private float currentSubSummonTime;
     private float subSummonedness;
 
@@ -39,7 +41,7 @@ public class RadialItemSet : MonoBehaviour
             + HandPrototypeProxies.Instance.LeftMiddle.position
             + HandPrototypeProxies.Instance.LeftPinky.position) / 4;
 
-        transform.position = Vector3.Lerp(transform.position, posTarget, Time.deltaTime * HandPrototypeA.Instance.Smoothing);
+        transform.position = Vector3.Lerp(transform.position, posTarget, Time.deltaTime * Prototype.Smoothing);
 
         Vector3 toCamera = transform.position - Camera.main.transform.position;
         Vector3 right = Vector3.Cross(toCamera, -Vector3.up);
@@ -58,8 +60,8 @@ public class RadialItemSet : MonoBehaviour
         {
             currentSubSummonTime -= Time.deltaTime;
         }
-        currentSubSummonTime = Mathf.Clamp(currentSubSummonTime, 0, HandPrototypeA.Instance.SummonTime);
-        subSummonedness = currentSubSummonTime / HandPrototypeA.Instance.SummonTime;
+        currentSubSummonTime = Mathf.Clamp(currentSubSummonTime, 0, Prototype.SummonTime);
+        subSummonedness = currentSubSummonTime / Prototype.SummonTime;
     }
 
     private void DoItemUpdate(RadialItem item, float angle)

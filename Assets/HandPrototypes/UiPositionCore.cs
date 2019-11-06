@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class UiPositionCore : MonoBehaviour
 {
-
     private HandPrototypeProxies proxies;
 
     public Transform CoreTransform { get; private set; }

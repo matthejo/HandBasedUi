@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class HorizontalItemSet : MonoBehaviour
 {
+    public HandPrototypeA Prototype;
     private float timeShown;
 
     public bool ShowItems;
@@ -27,8 +28,8 @@ public class HorizontalItemSet : MonoBehaviour
         {
             timeShown -= Time.deltaTime;
         }
-        timeShown = Mathf.Clamp(timeShown, 0, HandPrototypeA.Instance.SummonTime);
-        float fadeVal = timeShown / HandPrototypeA.Instance.SummonTime;
+        timeShown = Mathf.Clamp(timeShown, 0, Prototype.SummonTime);
+        float fadeVal = timeShown / Prototype.SummonTime;
         foreach (HorizontalItem item in items)
         {
             item.Obj.SetActive(timeShown > float.Epsilon);
