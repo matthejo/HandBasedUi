@@ -15,10 +15,7 @@ public class RadialItemSet : MonoBehaviour
     public float AngleSpread;
     public float AngleOffset;
     public float OriginOffset;
-
-    private void Start()
-    {
-    }
+    
 
     private void Update()
     {
@@ -98,10 +95,5 @@ public class RadialItemSet : MonoBehaviour
         Vector3 basePos = transform.position;
         Vector3 offset = transform.right * OriginOffset;
         return basePos + offset;
-    }
-
-    public void ToggleIsOpen()
-    {
-        HandPrototypeA.Instance.OnToolsPressed();
     }
 }

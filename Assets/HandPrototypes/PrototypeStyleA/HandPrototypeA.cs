@@ -6,15 +6,14 @@ using UnityEngine;
 public class HandPrototypeA : MonoBehaviour
 {
     public static HandPrototypeA Instance;
-
+    
     public float HoverDist = .2f;
     public float FingerRadius = 0.03f;
 
     private HandPrototypeProxies proxies;
-    [Range(0, 1)]
-    public float PalmSummonThreshold;
-    [Range(0, 1)]
-    public float PalmDismissThreshold;
+
+    public SummonDetector Summoning;
+    public UiPositionCore PositionCore;
 
     public RadialItemSet MainSet;
     public RadialItemSet ToolsSet;
@@ -33,9 +32,6 @@ public class HandPrototypeA : MonoBehaviour
     private float currentSummonTime;
     public float Summonedness { get; private set; }
 
-    private Transform psuedoPalm;
-    public Transform EffectivePalm { get; private set; }
-
     public UiState State { get; private set; }
     
     public enum UiState
@@ -46,10 +42,6 @@ public class HandPrototypeA : MonoBehaviour
         BrowsingWindows
     }
 
-    public void OnToolsPressed()
-    {
-    }
-
     private void Awake()
     {
         Instance = this;
@@ -57,8 +49,6 @@ public class HandPrototypeA : MonoBehaviour
 
     private void Start()
     {
-        psuedoPalm = new GameObject("PsuedoPalm").transform;
-        EffectivePalm = psuedoPalm;
         proxies = HandPrototypeProxies.Instance;
         ToolsButton.Released += OnToolsButtonReleased;
         PanelsButton.Released += OnPanelsButtonReleased;
@@ -100,40 +90,11 @@ public class HandPrototypeA : MonoBehaviour
 
     private void Update()
     {
-        UpdatePsuedoPalm();
         UpdatePrimaryVisibility();
         
         MainSet.ShowItems = State != UiState.Unsummoned;
         ToolsSet.ShowItems = State == UiState.BrowsingTools;
         PanelsSet.ShowItems = State == UiState.BrowsingWindows;
-    }
-
-    private void UpdatePsuedoPalm()
-    {
-        psuedoPalm.position = proxies.LeftPalm.position;
-        Vector3 psuedoPalmForward = GetPsuedoPalmForward();
-        Vector3 psuedoPalmUp = GetPsuedoPalmUp(psuedoPalmForward);
-        psuedoPalm.rotation = Quaternion.LookRotation(psuedoPalmUp, -psuedoPalmForward);
-    }
-
-    private Vector3 GetPsuedoPalmUp(Vector3 forward)
-    {
-        Vector3 fingerTipAverage = (proxies.LeftIndex.position +
-            proxies.LeftMiddle.position +
-            proxies.LeftPinky.position +
-            proxies.LeftRing.position) / 4;
-        Vector3 toPalm = proxies.LeftPalm.position - fingerTipAverage;
-        return Vector3.Cross(toPalm, forward);
-    }
-
-    private Vector3 GetPsuedoPalmForward()
-    {
-        Vector3 pointA = (proxies.LeftIndex.position + proxies.LeftMiddle.position) / 2;
-        Vector3 pointB = (proxies.LeftRing.position + proxies.LeftPinky.position) / 2;
-
-        Vector3 toPalmA = pointA - proxies.LeftPalm.position;
-        Vector3 toPalmB = pointB - proxies.LeftPalm.position;
-        return Vector3.Cross(toPalmA, toPalmB);
     }
 
     private Quaternion GetItemRotation()
@@ -146,8 +107,7 @@ public class HandPrototypeA : MonoBehaviour
 
     private void UpdatePrimaryVisibility()
     {
-        bool primaryVisibility = GetPrimaryVisibility();
-        if(primaryVisibility)
+        if(Summoning.IsSummoned)
         {
             if(State == UiState.Unsummoned)
             {
@@ -158,16 +118,5 @@ public class HandPrototypeA : MonoBehaviour
         {
             State = UiState.Unsummoned;
         }
-    }
-
-    private bool GetPrimaryVisibility()
-    {
-        Vector3 toCamera = (proxies.LeftPalm.position - Camera.main.transform.position).normalized;
-        float palmDot = Vector3.Dot(toCamera, EffectivePalm.up);
-        if(State == UiState.Unsummoned)
-        {
-            return palmDot > PalmSummonThreshold;
-        }
-        return palmDot > PalmDismissThreshold;
     }
 }

@@ -20,10 +20,7 @@ public class PrototypeSwitcher : MonoBehaviour
 
     private void Update()
     {
-        if(Style != lastStyle)
-        {
-            PrototypeA.SetActive(Style == PrototypeStyle.StyleA);
-            PrototypeB.SetActive(Style == PrototypeStyle.StyleB);
-        }
+        PrototypeA.SetActive(Style == PrototypeStyle.StyleA);
+        PrototypeB.SetActive(Style == PrototypeStyle.StyleB);
     }
 }

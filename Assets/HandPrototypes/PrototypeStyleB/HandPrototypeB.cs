@@ -4,15 +4,42 @@ using UnityEngine;
 
 public class HandPrototypeB : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float SummonTime;
+    private float currentSummonTime;
+    public float Summonedness { get; private set; }
+
+    public SummonDetector Summoning;
+    public UiPositionCore PositionCore;
+    public enum UiState
     {
-        
+        Unsummoned,
+        Summoned
     }
 
-    // Update is called once per frame
-    void Update()
+    public UiState State { get; private set; }
+
+    private void Start()
     {
-        
+        transform.SetParent(PositionCore.CoreTransform, false);
+    }
+
+    private void Update()
+    {
+        UpdatePrimaryVisibility();
+    }
+
+    private void UpdatePrimaryVisibility()
+    {
+        if (Summoning.IsSummoned)
+        {
+            if (State == UiState.Unsummoned)
+            {
+                State = UiState.Summoned;
+            }
+        }
+        else
+        {
+            State = UiState.Unsummoned;
+        }
     }
 }
