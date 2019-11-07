@@ -8,29 +8,18 @@ public class GrabbableItemsManager : MonoBehaviour
     public HandPrototype Prototype;
     public float GrabRestoreTime;
     public float GrabMargin = .1f;
-    public static GrabbableItemsManager Instance;
+    public float GrabSnapThreshold;
 
-    private List<GrabbablePanel> items;
+    public Grabbable[] Items;
 
     private bool wasGrabbing;
-    public GrabbablePanel GrabbedItem { get; private set; }
+    public Grabbable GrabbedItem { get; private set; }
 
     public Transform SmoothedGrabPoint { get; private set; }
-
-    private void Awake()
-    {
-        Instance = this;
-        items = new List<GrabbablePanel>();
-    }
 
     private void Start()
     {
         SmoothedGrabPoint = new GameObject("Smoothed Grab Point").transform;
-    }
-
-    public void RegisterGrabbableItem(GrabbablePanel item)
-    {
-        items.Add(item);
     }
 
     public void Update()
@@ -54,9 +43,23 @@ public class GrabbableItemsManager : MonoBehaviour
     {
         Vector3 positionTarget = GrabDetector.Instance.GrabPoint.position;
         Quaternion rotationTarget = GrabDetector.Instance.GrabPoint.rotation;
+        //rotationTarget = GetSnappedGrabTarget(rotationTarget);
         SmoothedGrabPoint.position = Vector3.Lerp(positionTarget, SmoothedGrabPoint.position, Prototype.Smoothing * Time.deltaTime);
         SmoothedGrabPoint.rotation = Quaternion.Lerp(rotationTarget, SmoothedGrabPoint.rotation, Prototype.Smoothing * Time.deltaTime);
     }
+
+    // TODO: Figure out the snapping stuff eventually
+    //private Quaternion GetSnappedGrabTarget(Quaternion rotationTarget)
+    //{
+    //    Vector3 eulers = rotationTarget.eulerAngles;
+    //    float distToAngle = Mathf.Abs((eulers.z % 45) - 45);
+    //    if(distToAngle < GrabSnapThreshold)
+    //    {
+    //        Vector3 newEuler = new Vector3(eulers.x, eulers.y, eulers.z - (eulers.z % 45));
+    //        return Quaternion.Euler(newEuler);
+    //    }
+    //    return rotationTarget;
+    //}
 
     private void HandleStopGrabbing()
     {
@@ -66,20 +69,20 @@ public class GrabbableItemsManager : MonoBehaviour
 
     private void HandleStartGrab()
     {
-        GrabbedItem = GetGrabbable();
+        GrabbedItem = GetGrabbableThumbnail();
         if(GrabbedItem != null)
         {
-            GrabbedItem.StarGrab();
+            GrabbedItem.StartGrab();
         }
     }
 
-    private GrabbablePanel GetGrabbable()
+    private Grabbable GetGrabbableThumbnail()
     {
         float closestGrabDist = GrabMargin;
-        GrabbablePanel ret = null;
-        foreach (GrabbablePanel item in items)
+        Grabbable ret = null;
+        foreach (Grabbable item in Items)
         {
-            if(item.ThumbnailContent.activeInHierarchy)
+            if(item.gameObject.activeInHierarchy)
             {
                 float grabDist = item.GetDistanceToGrab();
                 if(grabDist < closestGrabDist)

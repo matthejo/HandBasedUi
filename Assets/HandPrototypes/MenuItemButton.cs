@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class MenuItemButton : MonoBehaviour
 {
+    public ButtonInteractionStyles InteractionStyle;
+    public bool Toggled;
+
     private bool clickable;
     public event EventHandler Pressed;
     public event EventHandler Released;
@@ -20,11 +23,18 @@ public class MenuItemButton : MonoBehaviour
     public MeshRenderer QuadMesh;
     private Material quadMeshMat;
 
+    public Transform ButtonContent;
+
     private enum ButtonState
     {
         Ready,
         Hovered,
         Pressing,
+    }
+    public enum ButtonInteractionStyles
+    {
+        ToggleButton,
+        ClickButton
     }
 
     private void Start()
@@ -36,12 +46,27 @@ public class MenuItemButton : MonoBehaviour
     {
         UpdateInteraction();
         UpdateMaterial();
+        UpdatePositions();
     }
+
+    private void UpdatePositions()
+    {
+        float buttonContentTarget = state == ButtonState.Hovered ? -12f : (state == ButtonState.Pressing ? 0.5f :-6f);
+        float newButtonZ = Mathf.Lerp(ButtonContent.localPosition.z, buttonContentTarget, Time.deltaTime * 50);
+        ButtonContent.localPosition = new Vector3(ButtonContent.localPosition.x, ButtonContent.localPosition.y, newButtonZ);
+
+        float backdropTarget = state == ButtonState.Pressing ? 16f : 0;
+        float newBackdropZ = Mathf.Lerp(QuadMesh.transform.localPosition.z, backdropTarget, Time.deltaTime * 50);
+        QuadMesh.transform.localPosition = new Vector3(QuadMesh.transform.localPosition.x, QuadMesh.transform.localPosition.y, newBackdropZ);
+    }
+
+    private Color currentColor;
 
     private void UpdateMaterial()
     {
-        Color color = GetStateColor();
-        quadMeshMat.SetColor("_Color", color);
+        Color colorTarget = GetStateColor();
+        currentColor = Color.Lerp(currentColor, colorTarget, Time.deltaTime * 15);
+        quadMeshMat.SetColor("_Color", currentColor);
     }
 
     private Color GetStateColor()
@@ -49,7 +74,7 @@ public class MenuItemButton : MonoBehaviour
         switch (state)
         {
             case ButtonState.Ready:
-                return Color.gray;
+                return Toggled ? Color.gray : Color.black;
             case ButtonState.Hovered:
                 return Color.blue;
             case ButtonState.Pressing:
@@ -121,5 +146,9 @@ public class MenuItemButton : MonoBehaviour
             PrototypeManager.OnAnyButtonRelease();
         }
         state = ButtonState.Ready;
+        if(InteractionStyle == ButtonInteractionStyles.ToggleButton)
+        {
+            Toggled = !Toggled;
+        }
     }
 }

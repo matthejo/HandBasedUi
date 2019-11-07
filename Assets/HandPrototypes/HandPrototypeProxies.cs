@@ -68,6 +68,12 @@ public class HandPrototypeProxies : MonoBehaviour
     {
         SetHandTransforms();
         UpdateShowProxies();
+        UpdateShaders();
+    }
+
+    private void UpdateShaders()
+    {
+        Shader.SetGlobalVector("_FingerPosition", RightIndex.position);
     }
 
     private void UpdateShowProxies()

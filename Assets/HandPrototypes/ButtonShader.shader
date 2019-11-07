@@ -1,14 +1,13 @@
-﻿Shader "Unlit/GrabbableOutlineShader"
+﻿Shader "Unlit/ButtonShader"
 {
     Properties
     {
+		_Color("Color", Color) = (.5, .5, .5, 1)
     }
     SubShader
     {
-        Tags { "Queue" = "Transparent" }
+        Tags { "RenderType"="Opaque" }
         LOD 100
-		ZWrite Off
-		Blend One One
 
         Pass
         {
@@ -22,6 +21,7 @@
             {
                 float4 vertex : POSITION;
                 float2 uv : TEXCOORD0;
+				float3 normal : NORMAL;
 				UNITY_VERTEX_INPUT_INSTANCE_ID
             };
 
@@ -29,9 +29,14 @@
             {
                 float2 uv : TEXCOORD0;
                 float4 vertex : SV_POSITION;
+				float3 worldPos : TEXCOORD1;
+				float3 worldNormal : TEXCOORD2;
 				UNITY_VERTEX_INPUT_INSTANCE_ID
 				UNITY_VERTEX_OUTPUT_STEREO
             };
+
+			float4 _Color;
+			float3 _FingerPosition;
 
             v2f vert (appdata v)
             {
@@ -41,14 +46,24 @@
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = v.uv;
+				o.worldPos = mul(unity_ObjectToWorld, v.vertex);
+				o.worldNormal = mul(unity_ObjectToWorld, v.normal);
                 return o;
             }
 
             fixed4 frag (v2f i) : SV_Target
             {
-				float ret = 1 - (abs(i.uv.y - .5) * 2);
-				ret = pow(ret, .5);
-				ret *= i.vertex.z * 20;
+				float3 toFinger = i.worldPos - _FingerPosition;
+				float dist = length(toFinger);
+				float distAlpha = 1 - dist * 5;
+
+				float dotToFinger = dot(normalize(i.worldNormal), normalize(toFinger));
+				float dotShade = pow(saturate(-dotToFinger), 100);
+				float antiShade = pow(saturate(dotToFinger), 100);
+				float4 antiShadeColor = antiShade * float4(1, .5, .5, 1);
+				float4 fingerShade = dotShade + antiShadeColor;
+				float4 ret = _Color + fingerShade;
+				ret *= distAlpha;
 				return ret;
             }
             ENDCG

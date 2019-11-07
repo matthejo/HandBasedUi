@@ -9,9 +9,11 @@ public class PrototypeSwitcher : MonoBehaviour
 
     public HandPrototype PrototypeA;
     public HandPrototype PrototypeB;
+    public HandPrototype PrototypeC;
 
     public MenuItemButton PrototypeAButton;
     public MenuItemButton PrototypeBButton;
+    public MenuItemButton PrototypeCButton;
 
     public HandPrototype SelectedStyle { get; private set; }
 
@@ -29,6 +31,12 @@ public class PrototypeSwitcher : MonoBehaviour
     {
         PrototypeAButton.Released += PrototypeAButton_Released;
         PrototypeBButton.Released += PrototypeBButton_Released;
+        PrototypeCButton.Released += PrototypeCButton_Released;
+    }
+
+    private void PrototypeCButton_Released(object sender, EventArgs e)
+    {
+        Style = PrototypeStyle.StyleC;
     }
 
     private void PrototypeAButton_Released(object sender, System.EventArgs e)
@@ -47,7 +55,11 @@ public class PrototypeSwitcher : MonoBehaviour
         LayoutButtons.SetActive(!SelectedStyle.IsSummoned);
 
         PrototypeA.gameObject.SetActive(Style == PrototypeStyle.StyleA);
+        PrototypeAButton.Toggled = Style == PrototypeStyle.StyleA;
         PrototypeB.gameObject.SetActive(Style == PrototypeStyle.StyleB);
+        PrototypeBButton.Toggled = Style == PrototypeStyle.StyleB;
+        PrototypeC.gameObject.SetActive(Style == PrototypeStyle.StyleC);
+        PrototypeCButton.Toggled = Style == PrototypeStyle.StyleC;
     }
 
     private HandPrototype GetSelectedStyle()
@@ -59,7 +71,7 @@ public class PrototypeSwitcher : MonoBehaviour
             case PrototypeStyle.StyleB:
                 return PrototypeB;
             case PrototypeStyle.StyleC:
-                return null;
+                return PrototypeC;
             case PrototypeStyle.StyleD:
             default:
                 return null;
