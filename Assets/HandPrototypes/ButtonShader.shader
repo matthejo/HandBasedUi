@@ -62,8 +62,7 @@
 				float antiShade = pow(saturate(dotToFinger), 100);
 				float4 antiShadeColor = antiShade * float4(1, .5, .5, 1);
 				float4 fingerShade = dotShade + antiShadeColor;
-				float4 ret = _Color + fingerShade;
-				ret *= distAlpha;
+				float4 ret = _Color + fingerShade * .2 * distAlpha;
 				return ret;
             }
             ENDCG

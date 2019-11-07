@@ -12,7 +12,7 @@ public class MenuItemButton : MonoBehaviour
     public event EventHandler Pressed;
     public event EventHandler Released;
 
-    public HandPrototype PrototypeManager;
+    public ButtonManager Manager;
 
     private ButtonState state;
 
@@ -74,12 +74,12 @@ public class MenuItemButton : MonoBehaviour
         switch (state)
         {
             case ButtonState.Ready:
-                return Toggled ? Color.gray : Color.black;
+                return Toggled ? Manager.ReadyToggledColor :Manager.ReadyColor;
             case ButtonState.Hovered:
-                return Color.blue;
+                return Manager.HoverColor;
             case ButtonState.Pressing:
             default:
-                return Color.cyan;
+                return Manager.PressingColor;
         }
     }
 
@@ -131,20 +131,14 @@ public class MenuItemButton : MonoBehaviour
     private void OnPress()
     {
         state = ButtonState.Pressing;
-        if (PrototypeManager != null)
-        {
-            PrototypeManager.OnAnyButtonPress();
-        }
+        Manager.OnAnyButtonPress();
         Pressed?.Invoke(this, EventArgs.Empty);
     }
 
     private void OnRelease()
     {
         Released?.Invoke(this, EventArgs.Empty);
-        if (PrototypeManager != null)
-        {
-            PrototypeManager.OnAnyButtonRelease();
-        }
+        Manager.OnAnyButtonRelease();
         state = ButtonState.Ready;
         if(InteractionStyle == ButtonInteractionStyles.ToggleButton)
         {

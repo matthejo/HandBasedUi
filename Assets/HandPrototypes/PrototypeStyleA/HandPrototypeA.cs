@@ -20,9 +20,6 @@ public class HandPrototypeA : HandPrototype
     public MenuItemButton ToolsButton;
     public MenuItemButton PanelsButton;
 
-    public AudioSource ButtonPressSound;
-    public AudioSource ButtonReleaseSound;
-
     public float Radius;
 
     public float SummonTime;
@@ -76,16 +73,6 @@ public class HandPrototypeA : HandPrototype
         {
             State = UiState.BrowsingTools;
         }
-    }
-
-    public override void OnAnyButtonPress()
-    {
-        ButtonPressSound.Play();
-    }
-
-    public override void OnAnyButtonRelease()
-    {
-        ButtonReleaseSound.Play();
     }
 
     private void Update()
