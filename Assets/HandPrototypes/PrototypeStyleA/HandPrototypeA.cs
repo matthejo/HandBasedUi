@@ -30,7 +30,15 @@ public class HandPrototypeA : HandPrototype
     public float Summonedness { get; private set; }
 
     public UiState State { get; private set; }
-    
+
+    public override bool IsSummoned
+    {
+        get
+        {
+            return Summoning.IsSummoned;
+        }
+    }
+
     public enum UiState
     {
         Unsummoned,

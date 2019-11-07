@@ -18,6 +18,14 @@ public class HandPrototypeB : HandPrototype
     public AudioSource ButtonPressSound;
     public AudioSource ButtonReleaseSound;
 
+    public override bool IsSummoned
+    {
+        get
+        {
+            return Summoning.IsSummoned;
+        }
+    }
+
     private void Update()
     {
         UpdatePrimaryVisibility();

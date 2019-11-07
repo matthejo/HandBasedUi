@@ -80,18 +80,14 @@ public class MenuItemButton : MonoBehaviour
         {
             if(!IsHoveringUnder())
             {
-                Released?.Invoke(this, EventArgs.Empty);
-                PrototypeManager.OnAnyButtonRelease();
-                state = ButtonState.Ready;
+                OnRelease();
             }
         }
         if(state == ButtonState.Hovered)
         {
             if (IsHoveringUnder())
             {
-                state = ButtonState.Pressing;
-                PrototypeManager.OnAnyButtonPress();
-                Pressed?.Invoke(this, EventArgs.Empty);
+                OnPress();
             }
             else if (!IsHoveringOver())
             {
@@ -105,5 +101,25 @@ public class MenuItemButton : MonoBehaviour
                 state = ButtonState.Hovered;
             }
         }
+    }
+
+    private void OnPress()
+    {
+        state = ButtonState.Pressing;
+        if (PrototypeManager != null)
+        {
+            PrototypeManager.OnAnyButtonPress();
+        }
+        Pressed?.Invoke(this, EventArgs.Empty);
+    }
+
+    private void OnRelease()
+    {
+        Released?.Invoke(this, EventArgs.Empty);
+        if (PrototypeManager != null)
+        {
+            PrototypeManager.OnAnyButtonRelease();
+        }
+        state = ButtonState.Ready;
     }
 }
