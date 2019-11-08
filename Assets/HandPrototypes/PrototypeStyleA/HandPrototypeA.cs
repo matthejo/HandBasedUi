@@ -82,6 +82,9 @@ public class HandPrototypeA : HandPrototype
         MainSet.ShowItems = State != UiState.Unsummoned;
         ToolsSet.ShowItems = State == UiState.BrowsingTools;
         PanelsSet.ShowItems = State == UiState.BrowsingWindows;
+
+        ToolsButton.Toggled = State == UiState.BrowsingTools;
+        PanelsButton.Toggled = State == UiState.BrowsingWindows;
     }
 
     private Quaternion GetItemRotation()

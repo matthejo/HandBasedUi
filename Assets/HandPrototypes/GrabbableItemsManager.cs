@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GrabbableItemsManager : MonoBehaviour
 {
-    public HandPrototype Prototype;
+    public float GrabSmoothing = 15;
     public float GrabRestoreTime;
     public float GrabMargin = .1f;
     public float GrabSnapThreshold;
@@ -44,8 +44,8 @@ public class GrabbableItemsManager : MonoBehaviour
         Vector3 positionTarget = GrabDetector.Instance.GrabPoint.position;
         Quaternion rotationTarget = GrabDetector.Instance.GrabPoint.rotation;
         //rotationTarget = GetSnappedGrabTarget(rotationTarget);
-        SmoothedGrabPoint.position = Vector3.Lerp(positionTarget, SmoothedGrabPoint.position, Prototype.Smoothing * Time.deltaTime);
-        SmoothedGrabPoint.rotation = Quaternion.Lerp(rotationTarget, SmoothedGrabPoint.rotation, Prototype.Smoothing * Time.deltaTime);
+        SmoothedGrabPoint.position = Vector3.Lerp(positionTarget, SmoothedGrabPoint.position, GrabSmoothing * Time.deltaTime);
+        SmoothedGrabPoint.rotation = Quaternion.Lerp(rotationTarget, SmoothedGrabPoint.rotation, GrabSmoothing * Time.deltaTime);
     }
 
     // TODO: Figure out the snapping stuff eventually
