@@ -9,6 +9,15 @@ public class HandPrototypeC : StandardHandPrototype
     public MenuItemButton ToolsButton;
     public MenuItemButton VideoButton;
 
+    private UiState state;
+
+    private enum UiState
+    {
+        Ready,
+        ToolsOpen,
+        VideoControlsOpen
+    }
+
     private void Start()
     {
         ToolsButton.Released += ToolsButton_Released;
@@ -19,7 +28,11 @@ public class HandPrototypeC : StandardHandPrototype
     {
         if(VideoButton.Toggled)
         {
-            ToolsButton.Toggled = false;
+            state = UiState.VideoControlsOpen;
+        }
+        else
+        {
+            state = UiState.Ready;
         }
     }
 
@@ -27,7 +40,11 @@ public class HandPrototypeC : StandardHandPrototype
     {
         if (ToolsButton.Toggled)
         {
-            VideoButton.Toggled = false;
+            state = UiState.VideoControlsOpen;
+        }
+        else
+        {
+            state = UiState.Ready;
         }
     }
 
@@ -36,13 +53,10 @@ public class HandPrototypeC : StandardHandPrototype
         UpdatePrimaryVisibility();
         UpdatePosition();
 
-        ToolButtons.SetActive(ToolsButton.Toggled);
-        VideoButtons.SetActive(VideoButton.Toggled);
-    }
+        ToolButtons.SetActive(state == UiState.ToolsOpen);
+        VideoButtons.SetActive(state == UiState.VideoControlsOpen);
 
-    private void OnEnabled()
-    {
-        ToolsButton.Toggled = false;
-        VideoButton.Toggled = false;
+        VideoButton.Toggled = state == UiState.VideoControlsOpen;
+        ToolsButton.Toggled = state == UiState.ToolsOpen;
     }
 }

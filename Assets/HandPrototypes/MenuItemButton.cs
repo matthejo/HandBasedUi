@@ -20,7 +20,7 @@ public class MenuItemButton : MonoBehaviour
     public MeshCollider BackwardsBackdrop;
     private float fingerDistance;
 
-    public MeshRenderer QuadMesh;
+    public Renderer BackgroundRenderer;
     private Material quadMeshMat;
 
     public Transform ButtonContent;
@@ -39,7 +39,7 @@ public class MenuItemButton : MonoBehaviour
 
     private void Start()
     {
-        quadMeshMat = QuadMesh.material;
+        quadMeshMat = BackgroundRenderer.material;
     }
 
     private void Update()
@@ -56,8 +56,8 @@ public class MenuItemButton : MonoBehaviour
         ButtonContent.localPosition = new Vector3(ButtonContent.localPosition.x, ButtonContent.localPosition.y, newButtonZ);
 
         float backdropTarget = state == ButtonState.Pressing ? 16f : 0;
-        float newBackdropZ = Mathf.Lerp(QuadMesh.transform.localPosition.z, backdropTarget, Time.deltaTime * 50);
-        QuadMesh.transform.localPosition = new Vector3(QuadMesh.transform.localPosition.x, QuadMesh.transform.localPosition.y, newBackdropZ);
+        float newBackdropZ = Mathf.Lerp(BackgroundRenderer.transform.localPosition.z, backdropTarget, Time.deltaTime * 50);
+        BackgroundRenderer.transform.localPosition = new Vector3(BackgroundRenderer.transform.localPosition.x, BackgroundRenderer.transform.localPosition.y, newBackdropZ);
     }
 
     private Color currentColor;
@@ -137,12 +137,12 @@ public class MenuItemButton : MonoBehaviour
 
     private void OnRelease()
     {
-        Released?.Invoke(this, EventArgs.Empty);
         Manager.OnAnyButtonRelease();
         state = ButtonState.Ready;
         if(InteractionStyle == ButtonInteractionStyles.ToggleButton)
         {
             Toggled = !Toggled;
         }
+        Released?.Invoke(this, EventArgs.Empty);
     }
 }
