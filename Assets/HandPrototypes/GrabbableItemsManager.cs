@@ -47,7 +47,7 @@ public class GrabbableItemsManager : MonoBehaviour
         SmoothedGrabPoint.position = Vector3.Lerp(positionTarget, SmoothedGrabPoint.position, GrabSmoothing * Time.deltaTime);
         SmoothedGrabPoint.rotation = Quaternion.Lerp(rotationTarget, SmoothedGrabPoint.rotation, GrabSmoothing * Time.deltaTime);
     }
-
+    
     // TODO: Figure out the snapping stuff eventually
     //private Quaternion GetSnappedGrabTarget(Quaternion rotationTarget)
     //{

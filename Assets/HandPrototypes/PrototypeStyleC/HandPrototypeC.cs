@@ -40,7 +40,7 @@ public class HandPrototypeC : StandardHandPrototype
     {
         if (ToolsButton.Toggled)
         {
-            state = UiState.VideoControlsOpen;
+            state = UiState.ToolsOpen;
         }
         else
         {

@@ -24,13 +24,15 @@ public class PrototypeSwitcher : MonoBehaviour
     {
         foreach (PrototypeBinding binding in Prototypes)
         {
-            binding.SelectorButton.Released += SelectorButton_Released;
+            binding.SelectorButton.Released += binding.OnRelease;
+            binding.Selected += Binding_Selected;
         }
     }
 
-    private void SelectorButton_Released(object sender, EventArgs e)
+    private void Binding_Selected(object sender, EventArgs e)
     {
-
+        PrototypeBinding binding = (PrototypeBinding)sender;
+        Style = binding.Style;
     }
 
     private void Update()
@@ -53,4 +55,11 @@ public class PrototypeBinding
     public PrototypeSwitcher.PrototypeStyle Style;
     public MenuItemButton SelectorButton;
     public HandPrototype Prototype;
+
+    public event EventHandler Selected;
+
+    public void OnRelease(object sender, EventArgs e)
+    {
+        Selected?.Invoke(this, EventArgs.Empty);
+    }
 }

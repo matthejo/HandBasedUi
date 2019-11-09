@@ -8,6 +8,7 @@ public class ButtonManager : MonoBehaviour
     public Color ReadyToggledColor = Color.gray;
     public Color HoverColor = Color.blue;
     public Color PressingColor = Color.cyan;
+    public Color DisabledColor = Color.gray;
 
     public AudioSource ButtonPressSound;
     public AudioSource ButtonReleaseSound;

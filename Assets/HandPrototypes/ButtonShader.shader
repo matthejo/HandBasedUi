@@ -36,6 +36,7 @@
             };
 
 			float4 _Color;
+			float _Disabledness;
 			float3 _FingerPosition;
 
             v2f vert (appdata v)
@@ -62,7 +63,9 @@
 				float antiShade = pow(saturate(dotToFinger), 100);
 				float4 antiShadeColor = antiShade * float4(1, .5, .5, 1);
 				float4 fingerShade = dotShade + antiShadeColor;
-				float4 ret = _Color + fingerShade * .2 * distAlpha;
+				fingerShade *= 1 - _Disabledness;
+				float4 ret = _Color;
+				ret += fingerShade * .2 * distAlpha;
 				return ret;
             }
             ENDCG

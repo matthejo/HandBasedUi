@@ -289,12 +289,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30453439bc24db94abb165c0ca6e878e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsDisabled: 0
   InteractionStyle: 0
   Toggled: 0
-  PrototypeManager: {fileID: 0}
+  Manager: {fileID: 0}
   Backdrop: {fileID: 4741092015748578062}
   BackwardsBackdrop: {fileID: 2839606643982275994}
-  QuadMesh: {fileID: 6220841989124136598}
+  BackgroundRenderer: {fileID: 6220841989124136598}
   ButtonContent: {fileID: 3274647775778945317}
 --- !u!1 &5727806570221480499
 GameObject:

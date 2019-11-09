@@ -56,7 +56,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 21340371490990018, guid: afc8299d5d5bbd440a0616c8ecbc7217, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,8 +114,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Arrow
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: afc8299d5d5bbd440a0616c8ecbc7217, type: 2}
+  m_sharedMaterial: {fileID: 21340371490990018, guid: afc8299d5d5bbd440a0616c8ecbc7217,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -290,6 +291,7 @@ GameObject:
   - component: {fileID: 8153876296337561061}
   - component: {fileID: 3327467432265794900}
   - component: {fileID: 1579525109845822043}
+  - component: {fileID: 4607922682398907015}
   m_Layer: 5
   m_Name: StyleDButton
   m_TagString: Untagged
@@ -337,6 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30453439bc24db94abb165c0ca6e878e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsDisabled: 0
   InteractionStyle: 1
   Toggled: 0
   Manager: {fileID: 0}
@@ -344,6 +347,22 @@ MonoBehaviour:
   BackwardsBackdrop: {fileID: 2591263774910885296}
   BackgroundRenderer: {fileID: 5167820510494141510}
   ButtonContent: {fileID: 5959218485456304949}
+--- !u!114 &4607922682398907015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5101699584792107004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11c34fa7e3161964d95f0a68a2343b5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: {fileID: 1579525109845822043}
+  Morpher: {fileID: 5167820510494141510}
+  IconText: {fileID: 6263509192015199657}
+  LabelText: {fileID: 2815843742666123549}
 --- !u!1 &6167882260611674794
 GameObject:
   m_ObjectHideFlags: 0

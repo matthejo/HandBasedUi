@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class MenuItemButton : MonoBehaviour
 {
+    public bool IsDisabled;
     public ButtonInteractionStyles InteractionStyle;
     public bool Toggled;
 
@@ -27,6 +28,7 @@ public class MenuItemButton : MonoBehaviour
 
     private enum ButtonState
     {
+        Disabled,
         Ready,
         Hovered,
         Pressing,
@@ -67,6 +69,7 @@ public class MenuItemButton : MonoBehaviour
         Color colorTarget = GetStateColor();
         currentColor = Color.Lerp(currentColor, colorTarget, Time.deltaTime * 15);
         quadMeshMat.SetColor("_Color", currentColor);
+        quadMeshMat.SetFloat("_Disabledness", state == ButtonState.Disabled ? 1 : 0);
     }
 
     private Color GetStateColor()
@@ -78,8 +81,10 @@ public class MenuItemButton : MonoBehaviour
             case ButtonState.Hovered:
                 return Manager.HoverColor;
             case ButtonState.Pressing:
-            default:
                 return Manager.PressingColor;
+            case ButtonState.Disabled:
+            default:
+                return Manager.DisabledColor;
         }
     }
 
@@ -87,7 +92,6 @@ public class MenuItemButton : MonoBehaviour
     {
         RaycastHit hitInfo;
         Ray ray = new Ray(HandPrototypeProxies.Instance.RightIndex.position, transform.forward);
-        Debug.DrawRay(HandPrototypeProxies.Instance.RightIndex.position, transform.forward, Color.blue);
         return Backdrop.Raycast(ray, out hitInfo, float.PositiveInfinity);
     }
 
@@ -95,12 +99,19 @@ public class MenuItemButton : MonoBehaviour
     {
         RaycastHit hitInfo;
         Ray ray = new Ray(HandPrototypeProxies.Instance.RightIndex.position, -transform.forward);
-        Debug.DrawRay(HandPrototypeProxies.Instance.RightIndex.position, -transform.forward, Color.green);
         return BackwardsBackdrop.Raycast(ray, out hitInfo, float.PositiveInfinity);
     }
 
     private void UpdateInteraction()
     {
+        if(IsDisabled)
+        {
+            state = ButtonState.Disabled;
+        }
+        else if (state == ButtonState.Disabled)
+        {
+            state = ButtonState.Ready;
+        }
         if(state == ButtonState.Pressing)
         {
             if(!IsHoveringUnder())
