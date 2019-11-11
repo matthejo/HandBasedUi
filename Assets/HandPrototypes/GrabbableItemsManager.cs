@@ -69,20 +69,20 @@ public class GrabbableItemsManager : MonoBehaviour
 
     private void HandleStartGrab()
     {
-        GrabbedItem = GetGrabbableThumbnail();
+        GrabbedItem = GetGrabbable();
         if(GrabbedItem != null)
         {
             GrabbedItem.StartGrab();
         }
     }
 
-    private Grabbable GetGrabbableThumbnail()
+    private Grabbable GetGrabbable()
     {
         float closestGrabDist = GrabMargin;
         Grabbable ret = null;
         foreach (Grabbable item in Items)
         {
-            if(item.gameObject.activeInHierarchy)
+            if(item.Box.gameObject.activeInHierarchy)
             {
                 float grabDist = item.GetDistanceToGrab();
                 if(grabDist < closestGrabDist)

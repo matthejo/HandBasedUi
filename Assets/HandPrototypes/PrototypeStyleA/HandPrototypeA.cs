@@ -3,15 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HandPrototypeA : HandPrototype
+public class HandPrototypeA : StandardHandPrototype
 {
     public float HoverDist = .2f;
     public float FingerRadius = 0.03f;
 
     private HandPrototypeProxies proxies;
-
-    public SummonDetector Summoning;
-    public UiPositionCore PositionCore;
 
     public RadialItemSet MainSet;
     public RadialItemSet ToolsSet;
@@ -22,19 +19,9 @@ public class HandPrototypeA : HandPrototype
 
     public float Radius;
 
-    public float SummonTime;
-    private float currentSummonTime;
-    public float Summonedness { get; private set; }
-
     public UiState State { get; private set; }
 
-    public override bool IsSummoned
-    {
-        get
-        {
-            return Summoning.IsSummoned;
-        }
-    }
+    public float BaseRotationOffset { get; private set; }
 
     public enum UiState
     {
@@ -78,6 +65,18 @@ public class HandPrototypeA : HandPrototype
     private void Update()
     {
         UpdatePrimaryVisibility();
+        UpdatePosition();
+        UpdateBaseRotation();
+
+
+        if (IsSummoned && State == UiState.Unsummoned)
+        {
+            State = UiState.Summoned;
+        }
+        if(!IsSummoned)
+        {
+            State = UiState.Unsummoned;
+        }
         
         MainSet.ShowItems = State != UiState.Unsummoned;
         ToolsSet.ShowItems = State == UiState.BrowsingTools;
@@ -87,26 +86,36 @@ public class HandPrototypeA : HandPrototype
         PanelsButton.Toggled = State == UiState.BrowsingWindows;
     }
 
+    private void UpdateBaseRotation()
+    {
+        float target = GetBaseRotationOffsetTarget();
+        BaseRotationOffset = Mathf.Lerp(BaseRotationOffset, target, Time.deltaTime * 15);
+    }
+
+    public float magicNumber = 180;
+
+    private float GetBaseRotationOffsetTarget()
+    {
+        Vector3 palmPoint = proxies.LeftPalm.position;
+        Vector3 fingerTipAverage = GetFingerTipAverage();
+        
+        Vector3 handVector = (fingerTipAverage - palmPoint).normalized;
+        return handVector.y * magicNumber;
+    }
+
+    private Vector3 GetFingerTipAverage()
+    {
+        return (HandPrototypeProxies.Instance.LeftIndex.position
+               + HandPrototypeProxies.Instance.LeftRing.position
+               + HandPrototypeProxies.Instance.LeftMiddle.position
+               + HandPrototypeProxies.Instance.LeftPinky.position) / 4;
+    }
+
     private Quaternion GetItemRotation()
     {
         Vector3 toCamera = Camera.main.transform.forward;
         Vector3 skyTangent = Vector3.Cross(toCamera, Vector3.up);
         Vector3 personalUp = Vector3.Cross(toCamera, skyTangent);
         return Quaternion.LookRotation(proxies.LeftPalm.up, -personalUp);
-    }
-
-    private void UpdatePrimaryVisibility()
-    {
-        if(Summoning.IsSummoned)
-        {
-            if(State == UiState.Unsummoned)
-            {
-                State = UiState.Summoned;
-            }
-        }
-        else
-        {
-            State = UiState.Unsummoned;
-        }
     }
 }

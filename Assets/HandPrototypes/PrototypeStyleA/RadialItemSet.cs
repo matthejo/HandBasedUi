@@ -18,11 +18,9 @@ public class RadialItemSet : MonoBehaviour
     public float AngleOffset;
     public float OriginOffset;
     
-
     private void Update()
     {
         UpdateSubSummonedness();
-        UpdateTransform();
 
         float angleSum = Items.Sum(item => item.Angle);
         float currentAngle = 0;
@@ -31,23 +29,6 @@ public class RadialItemSet : MonoBehaviour
             DoItemUpdate(Items[i], currentAngle / angleSum);
             currentAngle += Items[i].Angle;
         }
-        UpdateCanvasAlpha();
-    }
-
-    private void UpdateTransform()
-    {
-        Vector3 posTarget = (HandPrototypeProxies.Instance.LeftIndex.position
-            + HandPrototypeProxies.Instance.LeftRing.position
-            + HandPrototypeProxies.Instance.LeftMiddle.position
-            + HandPrototypeProxies.Instance.LeftPinky.position) / 4;
-
-        transform.position = Vector3.Lerp(transform.position, posTarget, Time.deltaTime * Prototype.Smoothing);
-
-        Vector3 toCamera = transform.position - Camera.main.transform.position;
-        Vector3 right = Vector3.Cross(toCamera, -Vector3.up);
-        Vector3 ourUp = Vector3.Cross(toCamera, right);
-        transform.LookAt(Camera.main.transform.position, ourUp);
-        transform.Rotate(0, 180, 0);
     }
 
     private void UpdateSubSummonedness()
@@ -69,18 +50,10 @@ public class RadialItemSet : MonoBehaviour
         item.gameObject.SetActive(subSummonedness > Mathf.Epsilon);
         SetItemPosition(item, angle);
     }
-    private void UpdateCanvasAlpha()
-    {
-        float alpha = Mathf.Pow(subSummonedness, 2);
-        foreach (RadialItem item in Items)
-        {
-            item.UpdateAlpha(alpha);
-        }
-    }
 
     private void SetItemPosition(RadialItem item, float angle)
     {
-        float effectiveAngle = angle * AngleSpread + AngleOffset;
+        float effectiveAngle = angle * AngleSpread + AngleOffset + Prototype.BaseRotationOffset;
 
         Vector3 basePosition = transform.right * Radius + transform.position;
         item.transform.position = basePosition;
