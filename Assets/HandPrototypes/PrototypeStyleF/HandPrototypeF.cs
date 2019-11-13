@@ -3,13 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HandPrototypeE : HandPrototype
+public class HandPrototypeF : HandPrototype
 {
-    private bool thumbnailsHovered;
-    private float morphness;
+    private float currentHoverTime;
+    public float HoverTime;
+
+    public Transform HoverProgressBar;
+    public GameObject CallControlButtons;
 
     public MeshCollider HoverZone;
-    public float RingRadius;
     public float SummonTime;
     private float currentSummonTime;
     public float Summonedness { get; private set; }
@@ -17,8 +19,6 @@ public class HandPrototypeE : HandPrototype
 
     public Transform HandContent;
     public Transform HandRotationPivot;
-
-    public MorphingThumbnail[] Morphers;
 
     public override bool IsSummoned
     {
@@ -46,18 +46,32 @@ public class HandPrototypeE : HandPrototype
     {
         UpdatePrimaryVisibility();
         UpdatePosition();
-        thumbnailsHovered = GetIsHovered(HoverZone);
-        UpdateMorphing();
+        UpdateCallControlButtons();
     }
-    
-    private void UpdateMorphing()
+
+    private void UpdateCallControlButtons()
     {
-        float morphnessTarget = thumbnailsHovered ? 1 : 0;
-        morphness = Mathf.Lerp(morphness, morphnessTarget, Time.deltaTime * 10);
-        foreach (MorphingThumbnail thumbnail in Morphers)
-        {
-            thumbnail.Morph(morphness);
-        }
+        bool isHovered = GetIsHovered(HoverZone);
+        currentHoverTime += isHovered ? Time.deltaTime : -Time.deltaTime;
+        currentHoverTime = Mathf.Clamp(currentHoverTime, 0, HoverTime);
+        float hoverness = currentHoverTime / HoverTime;
+        HoverProgressBar.localScale = new Vector3(hoverness, 1, 1);
+
+        bool showProgressbar = GetShouldShowProgressbar(hoverness);
+        HoverProgressBar.gameObject.SetActive(showProgressbar);
+
+        bool showCallControlButtons = GetShouldShowCallButtons(hoverness);
+        CallControlButtons.SetActive(showCallControlButtons);
+    }
+
+    private bool GetShouldShowCallButtons(float hoverness)
+    {
+        return (hoverness > 0.99f);
+    }
+
+    private bool GetShouldShowProgressbar(float hoverness)
+    {
+        return hoverness > float.Epsilon && hoverness < 1;
     }
 
     private bool GetIsHovered(MeshCollider collider)
