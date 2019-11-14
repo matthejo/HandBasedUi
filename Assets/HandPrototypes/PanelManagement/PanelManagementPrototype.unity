@@ -803,9 +803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimewarpFrames: 10
-  XSnap: 1
-  YSnap: 15
-  ZSnap: 180
+  SnapThreshold: 0.9
   PreviewBox: {fileID: 307051952}
   PreviewBoxPadding: 0.01
   GrabSmoothing: 5
@@ -862,8 +860,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2994807b18bff94c85e5354f8788f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IndexSphere: {fileID: 803532321}
-  ThumbSphere: {fileID: 1613214773}
+  GrabDist: 0.03
+  UngrabDist: 0.09
 --- !u!1 &1095044052
 GameObject:
   m_ObjectHideFlags: 0

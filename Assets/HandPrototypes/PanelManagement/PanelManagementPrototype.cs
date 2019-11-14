@@ -6,9 +6,8 @@ using UnityEngine;
 public class PanelManagementPrototype : MonoBehaviour
 {
     public int TimewarpFrames = 10;
-    public float XSnap;
-    public float YSnap;
-    public float ZSnap;
+    public float PanelSmoothing;
+    public float SnapThreshold;
     public PreviewBox PreviewBox;
     public float PreviewBoxPadding;
     public float GrabSmoothing = 15;

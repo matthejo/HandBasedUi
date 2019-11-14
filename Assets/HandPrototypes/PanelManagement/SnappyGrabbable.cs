@@ -8,36 +8,50 @@ public class SnappyGrabbable : MonoBehaviour
     private Timewarping timewarper;
 
     private Transform originalParent;
+    private Transform snappingHelper;
 
     public PanelManagementPrototype Manager;
+
+    private Vector3 targetPosition;
+    private Quaternion targetRotation;
 
     public BoxCollider Box { get; private set; }
 
     private void Start()
     {
+        snappingHelper = new GameObject("Snapping Helper").transform;
         originalParent = transform.parent;
         Box = GetComponent<BoxCollider>();
         timewarper = new Timewarping(Manager.TimewarpFrames);
+        targetPosition = transform.position;
+        targetRotation = transform.rotation;
     }
 
     public void Update()
     {
         if(Manager.GrabbedItem == this)
         {
-            transform.position = Manager.PreviewBox.transform.position;
-            transform.rotation = GetSnappedRotation(Manager.PreviewBox.transform.rotation);
+            targetPosition = Manager.PreviewBox.transform.position;
+            targetRotation = GetSnappedRotation();
 
             timewarper.RegisterTransform(transform.position, transform.rotation);
         }
+        transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * Manager.PanelSmoothing);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * Manager.PanelSmoothing);
     }
 
-    private Quaternion GetSnappedRotation(Quaternion baseRotation)
+    private Quaternion GetSnappedRotation()
     {
-        Vector3 eulers = baseRotation.eulerAngles;
-        float snappedX = GetSnappedVal(eulers.x, Manager.XSnap);
-        float snappedY = GetSnappedVal(eulers.y, Manager.YSnap);
-        float snappedZ = GetSnappedVal(eulers.z, Manager.ZSnap);
-        return Quaternion.Euler(snappedX, snappedY, snappedZ);
+        snappingHelper.position = targetPosition;
+        snappingHelper.LookAt(Camera.main.transform);
+
+
+        float dot = Vector3.Dot(Manager.PreviewBox.transform.forward, snappingHelper.forward);
+        if(dot > Manager.SnapThreshold)
+        {
+            return snappingHelper.rotation;
+        }
+        return Manager.PreviewBox.transform.rotation;
     }
 
     private float GetSnappedVal(float axis, float snap)
@@ -56,13 +70,13 @@ public class SnappyGrabbable : MonoBehaviour
 
     public void StartGrab()
     {
-        timewarper.Reset(transform.position, transform.rotation);
+        timewarper.Reset(targetPosition, targetRotation);
     }
 
     public void EndGrab()
     {
-        transform.position = timewarper.GetTimewarpPosition();
-        transform.rotation = timewarper.GetTimewarpRotation();
+        targetPosition = timewarper.GetTimewarpPosition();
+        targetRotation = timewarper.GetTimewarpRotation();
     }
 
     private class Timewarping
