@@ -20,6 +20,7 @@ public class HandPrototypeProxies : MonoBehaviour
 
     public Transform RightIndex;
     public Transform RightThumb;
+    public Transform RightPalm;
 
     private IEnumerable<MeshRenderer> proxyRenderers;
 
@@ -48,6 +49,7 @@ public class HandPrototypeProxies : MonoBehaviour
         
         SetTransform(TrackedHandJoint.IndexTip, RightIndex, Handedness.Right);
         SetTransform(TrackedHandJoint.ThumbTip, RightThumb, Handedness.Right);
+        SetTransform(TrackedHandJoint.Palm, RightPalm, Handedness.Right);
     }
 
     private void Start()
@@ -61,6 +63,7 @@ public class HandPrototypeProxies : MonoBehaviour
             LeftPinky.GetComponent<MeshRenderer>(),
             RightIndex.GetComponent<MeshRenderer>(),
             RightThumb.GetComponent<MeshRenderer>(),
+            RightPalm.GetComponent<MeshRenderer>(),
         };
     }
 

@@ -5,12 +5,10 @@ using UnityEngine;
 
 public class GrabDetector : MonoBehaviour
 {
+    public float GrabDist = 0.03f;
+    public float UngrabDist = 0.09f;
+    private HandPrototypeProxies proxies;
     public static GrabDetector Instance;
-
-    public GameObject IndexSphere;
-    public GameObject ThumbSphere;
-
-    private Material mat;
 
     public bool Grabbing { get; private set; }
 
@@ -23,32 +21,30 @@ public class GrabDetector : MonoBehaviour
 
     private void Start()
     {
-        mat = ThumbSphere.GetComponent<MeshRenderer>().sharedMaterial;
+        proxies = HandPrototypeProxies.Instance;
         GrabPoint = new GameObject("Pinch Point").transform;
     }
 
     private void Update()
     {
-        float tipDistance = (IndexSphere.transform.position - ThumbSphere.transform.position).magnitude;
+        float tipDistance = (proxies.RightIndex.transform.position - proxies.RightThumb.transform.position).magnitude;
         if(Grabbing)
         {
-            Grabbing = tipDistance < (ThumbSphere.transform.localScale.x * 3);
+            Grabbing = tipDistance < UngrabDist;
         }
         else
         {
-            Grabbing = tipDistance < ThumbSphere.transform.localScale.x;
+            Grabbing = tipDistance < GrabDist;
         }
 
         UpdateGrabPoint();
-        mat.SetColor("_Color", Grabbing ? Color.green : Color.gray);
     }
 
     private void UpdateGrabPoint()
     {
-        Vector3 grabPos = (IndexSphere.transform.position + ThumbSphere.transform.position) / 2;
-        Quaternion grabRot = Quaternion.Lerp(IndexSphere.transform.rotation, ThumbSphere.transform.rotation, .5f);
+        Vector3 grabPos = (proxies.RightThumb.transform.position + proxies.RightIndex.transform.position) / 2;
 
         GrabPoint.position = grabPos;
-        GrabPoint.rotation = grabRot;
+        GrabPoint.rotation = proxies.RightPalm.rotation;
     }
 }
