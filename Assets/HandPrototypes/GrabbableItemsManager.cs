@@ -5,15 +5,21 @@ using UnityEngine;
 
 public class GrabbableItemsManager : MonoBehaviour
 {
+    public int TimewarpFrames = 10;
+    public float PanelSmoothing = 5;
+    public float SnapThreshold = .9f;
+
+    public PreviewBox PreviewBox;
+    public float PreviewBoxPadding = 0.01f;
+
     public float GrabSmoothing = 15;
     public float GrabRestoreTime;
     public float GrabMargin = .1f;
-    public float GrabSnapThreshold;
 
     public Grabbable[] Items;
 
     private bool wasGrabbing;
-    public Grabbable GrabbedItem { get; private set; }
+    public Grabbable GrabbedItem { get; set; }
 
     public Transform SmoothedGrabPoint { get; private set; }
 
@@ -25,14 +31,26 @@ public class GrabbableItemsManager : MonoBehaviour
     public void Update()
     {
         UpdateSmoothedGrabPoint();
-        if(GrabDetector.Instance.Grabbing && !wasGrabbing)
+        UpdateGrabbing();
+        UpdateGrabPreview();
+    }
+
+    private void UpdateGrabPreview()
+    {
+        bool itemIsGrabbed = GrabbedItem != null;
+        PreviewBox.gameObject.SetActive(itemIsGrabbed);
+    }
+
+    private void UpdateGrabbing()
+    {
+        if (GrabDetector.Instance.Grabbing && !wasGrabbing)
         {
-            if(GrabbedItem == null)
+            if (GrabbedItem == null)
             {
                 HandleStartGrab();
             }
         }
-        if(!GrabDetector.Instance.Grabbing && GrabbedItem != null)
+        if (!GrabDetector.Instance.Grabbing && GrabbedItem != null)
         {
             HandleStopGrabbing();
         }
@@ -49,6 +67,7 @@ public class GrabbableItemsManager : MonoBehaviour
 
     private void HandleStopGrabbing()
     {
+        PreviewBox.EndGrab();
         GrabbedItem.EndGrab();
         GrabbedItem = null;
     }
@@ -56,10 +75,39 @@ public class GrabbableItemsManager : MonoBehaviour
     private void HandleStartGrab()
     {
         GrabbedItem = GetGrabbable();
-        if(GrabbedItem != null)
+        if (GrabbedItem != null)
         {
+            PreviewBox.StartGrab();
             GrabbedItem.StartGrab();
         }
+        else
+        {
+            GrabbedItem = GetGrabbedThumb();
+            if(GrabbedItem != null)
+            {
+                PreviewBox.StartThumbnailGrab();
+                GrabbedItem.StartThumbGrab();
+            }
+        }
+    }
+
+    private Grabbable GetGrabbedThumb()
+    {
+        float closestGrabDist = GrabMargin;
+        Grabbable ret = null;
+        foreach (Grabbable item in Items)
+        {
+            if (item.ThumbnailBox.gameObject.activeInHierarchy)
+            {
+                float grabDist = item.GetDistanceToThumbnailGrab();
+                if (grabDist < closestGrabDist)
+                {
+                    closestGrabDist = grabDist;
+                    ret = item;
+                }
+            }
+        }
+        return ret;
     }
 
     private Grabbable GetGrabbable()

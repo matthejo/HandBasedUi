@@ -4,7 +4,7 @@ public class PreviewBox : MonoBehaviour
 {
     private Transform originalParent;
 
-    public PanelManagementPrototype Manager;
+    public GrabbableItemsManager Manager;
 
     public BoxCollider Box { get; private set; }
 
@@ -31,6 +31,23 @@ public class PreviewBox : MonoBehaviour
             grabbedTransform.lossyScale.z + Manager.PreviewBoxPadding);
         transform.position = grabbedTransform.position;
         transform.rotation = grabbedTransform.rotation;
+    }
+
+    public void StartThumbnailGrab()
+    {
+        transform.parent = Manager.SmoothedGrabPoint;
+
+        Transform grabbedTransform = Manager.GrabbedItem.transform;
+        Transform thumbTransform = Manager.GrabbedItem.ThumbnailContent.transform;
+        transform.localScale = new Vector3(grabbedTransform.lossyScale.x + Manager.PreviewBoxPadding,
+            grabbedTransform.lossyScale.y + Manager.PreviewBoxPadding,
+            grabbedTransform.lossyScale.z + Manager.PreviewBoxPadding);
+        transform.position = thumbTransform.position;
+        transform.rotation = thumbTransform.rotation;
+    }
+
+    private void StartGrab(Transform grabbedTransform)
+    {
     }
 
     public void EndGrab()

@@ -8,8 +8,10 @@ public class PanelManagementPrototype : MonoBehaviour
     public int TimewarpFrames = 10;
     public float PanelSmoothing;
     public float SnapThreshold;
+
     public PreviewBox PreviewBox;
     public float PreviewBoxPadding;
+
     public float GrabSmoothing = 15;
     public float GrabRestoreTime;
     public float GrabMargin = .1f;

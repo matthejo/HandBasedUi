@@ -5,10 +5,6 @@ using UnityEngine;
 
 public class HandPrototypeE : HandPrototype
 {
-    private bool thumbnailsHovered;
-    private float morphness;
-
-    public MeshCollider HoverZone;
     public float RingRadius;
     public float SummonTime;
     private float currentSummonTime;
@@ -17,8 +13,6 @@ public class HandPrototypeE : HandPrototype
 
     public Transform HandContent;
     public Transform HandRotationPivot;
-
-    public MorphingThumbnail[] Morphers;
 
     public override bool IsSummoned
     {
@@ -46,24 +40,5 @@ public class HandPrototypeE : HandPrototype
     {
         UpdatePrimaryVisibility();
         UpdatePosition();
-        thumbnailsHovered = GetIsHovered(HoverZone);
-        UpdateMorphing();
-    }
-    
-    private void UpdateMorphing()
-    {
-        float morphnessTarget = thumbnailsHovered ? 1 : 0;
-        morphness = Mathf.Lerp(morphness, morphnessTarget, Time.deltaTime * 10);
-        foreach (MorphingThumbnail thumbnail in Morphers)
-        {
-            thumbnail.Morph(morphness);
-        }
-    }
-
-    private bool GetIsHovered(MeshCollider collider)
-    {
-        RaycastHit hitInfo;
-        Ray ray = new Ray(HandPrototypeProxies.Instance.RightIndex.position - HoverZone.transform.forward, HoverZone.transform.forward);
-        return collider.Raycast(ray, out hitInfo, float.PositiveInfinity);
     }
 }

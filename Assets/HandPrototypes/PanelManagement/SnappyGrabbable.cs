@@ -10,7 +10,7 @@ public class SnappyGrabbable : MonoBehaviour
     private Transform originalParent;
     private Transform snappingHelper;
 
-    public PanelManagementPrototype Manager;
+    public GrabbableItemsManager Manager;
 
     private Vector3 targetPosition;
     private Quaternion targetRotation;
