@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,5 +23,12 @@ public class ButtonManager : MonoBehaviour
     public void OnAnyButtonRelease()
     {
         ButtonReleaseSound.Play();
+    }
+
+    public PrototypeCursor Cursor;
+
+    internal void RegisterHover(Vector3 point)
+    {
+        Cursor.DoButtonHover(point);
     }
 }

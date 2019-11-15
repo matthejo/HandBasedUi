@@ -64,20 +64,6 @@ public class Grabbable : MonoBehaviour
         transform.localScale = Vector3.Lerp(transform.localScale, fullContentScale, grabLerp);
     }
 
-    public float GetDistanceToGrab()
-    {
-        Vector3 grabPoint = GrabDetector.Instance.GrabPoint.position;
-        Vector3 closestPoint = Box.ClosestPoint(grabPoint);
-        return (grabPoint - closestPoint).magnitude;
-    }
-
-    public float GetDistanceToThumbnailGrab()
-    {
-        Vector3 grabPoint = GrabDetector.Instance.GrabPoint.position;
-        Vector3 closestPoint = ThumbnailBox.ClosestPoint(grabPoint);
-        return (grabPoint - closestPoint).magnitude;
-    }
-
     public void StartGrab()
     {
         timewarper.Reset(targetPosition, targetRotation);

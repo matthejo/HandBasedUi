@@ -1,4 +1,4 @@
-﻿Shader "Unlit/GrabbableOutlineShader"
+﻿Shader "Unlit/ProtoCursorShader"
 {
     Properties
     {
@@ -52,7 +52,9 @@
 				float ret = 1 - (abs(i.uv.y - .5) * 2);
 				ret = pow(ret, .5);
 				ret *= i.vertex.z * 20;
-				return i.color * ret;
+				float fade = 1 - i.uv.x;
+				ret = fade * saturate(ret);
+				return ret;
             }
             ENDCG
         }

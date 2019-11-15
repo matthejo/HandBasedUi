@@ -88,9 +88,8 @@ public class MenuItemButton : MonoBehaviour
         }
     }
 
-    private bool IsHoveringOver()
+    private bool IsHoveringOver(out RaycastHit hitInfo)
     {
-        RaycastHit hitInfo;
         Ray ray = new Ray(HandPrototypeProxies.Instance.RightIndex.position, transform.forward);
         return Backdrop.Raycast(ray, out hitInfo, float.PositiveInfinity);
     }
@@ -119,22 +118,28 @@ public class MenuItemButton : MonoBehaviour
                 OnRelease();
             }
         }
+        RaycastHit hoverInfo;
         if(state == ButtonState.Hovered)
         {
             if (IsHoveringUnder())
             {
                 OnPress();
             }
-            else if (!IsHoveringOver())
+            else if (!IsHoveringOver(out hoverInfo))
             {
                 state = ButtonState.Ready;
+            }
+            else
+            {
+                Manager.RegisterHover(hoverInfo.point);
             }
         }
         if(state == ButtonState.Ready)
         {
-            if(IsHoveringOver())
+            if(IsHoveringOver(out hoverInfo))
             {
                 state = ButtonState.Hovered;
+                Manager.RegisterHover(hoverInfo.point);
             }
         }
     }

@@ -1,14 +1,17 @@
-﻿Shader "Unlit/GrabbableOutlineShader"
+﻿Shader "Unlit/TetherShader"
 {
     Properties
     {
+		_Color("Color", Color) = (1,1,1,1)
     }
     SubShader
     {
-        Tags { "Queue" = "Transparent" }
+        Tags { "RenderType"="Opaque" }
         LOD 100
+
 		ZWrite Off
 		Blend One One
+		Cull Front
 
         Pass
         {
@@ -22,7 +25,6 @@
             {
                 float4 vertex : POSITION;
                 float2 uv : TEXCOORD0;
-				float4 color : COLOR;
 				UNITY_VERTEX_INPUT_INSTANCE_ID
             };
 
@@ -30,10 +32,11 @@
             {
                 float2 uv : TEXCOORD0;
                 float4 vertex : SV_POSITION;
-				float4 color : COLOR;
 				UNITY_VERTEX_INPUT_INSTANCE_ID
 				UNITY_VERTEX_OUTPUT_STEREO
             };
+
+			float4 _Color;
 
             v2f vert (appdata v)
             {
@@ -43,16 +46,19 @@
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = v.uv;
-				o.color = v.color;
                 return o;
             }
 
             fixed4 frag (v2f i) : SV_Target
             {
-				float ret = 1 - (abs(i.uv.y - .5) * 2);
-				ret = pow(ret, .5);
-				ret *= i.vertex.z * 20;
-				return i.color * ret;
+				float horizontalTube = abs(i.uv.x - .5) * 2;
+				horizontalTube = 1 - pow(horizontalTube, 2);
+
+				float verticalTube = abs(i.uv.y - .5) * 2;
+				verticalTube = 1 - pow(verticalTube, 10);
+				float alpha = horizontalTube * verticalTube;
+				alpha -= 1 - i.uv.y;
+				return _Color * saturate(alpha) * 2;
             }
             ENDCG
         }

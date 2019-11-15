@@ -10,6 +10,8 @@ public class GrabbableItemsManager : MonoBehaviour
     public float SnapThreshold = .9f;
 
     public PreviewBox PreviewBox;
+    public PrototypeCursor GrabCursor;
+
     public float PreviewBoxPadding = 0.01f;
 
     public float GrabSmoothing = 15;
@@ -17,6 +19,8 @@ public class GrabbableItemsManager : MonoBehaviour
     public float GrabMargin = .1f;
 
     public Grabbable[] Items;
+
+    public GrabPreviewing GrabPreview { get; } = new GrabPreviewing();
 
     private bool wasGrabbing;
     public Grabbable GrabbedItem { get; set; }
@@ -32,7 +36,17 @@ public class GrabbableItemsManager : MonoBehaviour
     {
         UpdateSmoothedGrabPoint();
         UpdateGrabbing();
+        UpdateGrabPreviewCursor();
         UpdateGrabPreview();
+    }
+
+    private void UpdateGrabPreviewCursor()
+    {
+        bool showCursor = GrabPreview.Grabbable != null && !GrabDetector.Instance.Grabbing;
+        if(showCursor)
+        {
+            GrabCursor.DoGrabHover(GrabPreview.GrabPosition);
+        }
     }
 
     private void UpdateGrabPreview()
@@ -43,12 +57,16 @@ public class GrabbableItemsManager : MonoBehaviour
 
     private void UpdateGrabbing()
     {
-        if (GrabDetector.Instance.Grabbing && !wasGrabbing)
+        if (GrabDetector.Instance.Grabbing )
         {
-            if (GrabbedItem == null)
+            if (!wasGrabbing && GrabPreview.Grabbable != null)
             {
                 HandleStartGrab();
             }
+        }
+        else
+        {
+            UpdateGrabPreviewing();
         }
         if (!GrabDetector.Instance.Grabbing && GrabbedItem != null)
         {
@@ -74,58 +92,64 @@ public class GrabbableItemsManager : MonoBehaviour
 
     private void HandleStartGrab()
     {
-        GrabbedItem = GetGrabbable();
-        if (GrabbedItem != null)
+        GrabbedItem = GrabPreview.Grabbable;
+        if (GrabPreview.WasThumbnail)
+        {
+            PreviewBox.StartThumbnailGrab();
+            GrabbedItem.StartThumbGrab();
+        }
+        else
         {
             PreviewBox.StartGrab();
             GrabbedItem.StartGrab();
         }
-        else
+    }
+
+    private void UpdateGrabPreviewing()
+    {
+        Vector3 grabPoint = GrabDetector.Instance.GrabPoint.position;
+        
+        float closestGrabDist = GrabMargin;
+        GrabPreview.Clear();
+
+        foreach (Grabbable item in Items)
         {
-            GrabbedItem = GetGrabbedThumb();
-            if(GrabbedItem != null)
-            {
-                PreviewBox.StartThumbnailGrab();
-                GrabbedItem.StartThumbGrab();
-            }
+            closestGrabDist = UpdateGrabPreviewing(grabPoint, closestGrabDist, item, item.Box, false);
+            closestGrabDist = UpdateGrabPreviewing(grabPoint, closestGrabDist, item, item.ThumbnailBox, true);
         }
     }
 
-    private Grabbable GetGrabbedThumb()
+    private float UpdateGrabPreviewing(Vector3 grabPoint, float closestGrabDist, Grabbable item, BoxCollider box, bool isThumbnail)
     {
-        float closestGrabDist = GrabMargin;
-        Grabbable ret = null;
-        foreach (Grabbable item in Items)
+        if (box.gameObject.activeInHierarchy)
         {
-            if (item.ThumbnailBox.gameObject.activeInHierarchy)
+            Vector3 itemPoint = box.ClosestPoint(grabPoint);
+            float itemDist = (grabPoint - itemPoint).magnitude;
+            if (itemDist < closestGrabDist)
             {
-                float grabDist = item.GetDistanceToThumbnailGrab();
-                if (grabDist < closestGrabDist)
-                {
-                    closestGrabDist = grabDist;
-                    ret = item;
-                }
+                GrabPreview.Update(item, itemPoint, isThumbnail);
+                return itemDist;
             }
         }
-        return ret;
+        return closestGrabDist;
     }
 
-    private Grabbable GetGrabbable()
+    public class GrabPreviewing
     {
-        float closestGrabDist = GrabMargin;
-        Grabbable ret = null;
-        foreach (Grabbable item in Items)
+        public Grabbable Grabbable { get; private set; }
+        public Vector3 GrabPosition { get; private set; }
+        public bool WasThumbnail { get; private set; }
+
+        public void Update(Grabbable grabbable, Vector3 grabPosition, bool wasThumbnail)
         {
-            if(item.Box.gameObject.activeInHierarchy)
-            {
-                float grabDist = item.GetDistanceToGrab();
-                if(grabDist < closestGrabDist)
-                {
-                    closestGrabDist = grabDist;
-                    ret = item;
-                }
-            }
+            Grabbable = grabbable;
+            GrabPosition = grabPosition;
+            WasThumbnail = wasThumbnail;
         }
-        return ret;
+
+        public void Clear()
+        {
+            Grabbable = null;
+        }
     }
 }
