@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Grabbable : MonoBehaviour
 {
@@ -42,8 +43,13 @@ public class Grabbable : MonoBehaviour
         {
             targetPosition = Manager.PreviewBox.transform.position;
             targetRotation = GetSnappedRotation();
-
+            
             timewarper.RegisterTransform(transform.position, transform.rotation);
+
+            if(thumbnailWasGrabbed)
+            {
+                UpdateThumbScale();
+            }
         }
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * Manager.PanelSmoothing);
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * Manager.PanelSmoothing);
@@ -54,6 +60,14 @@ public class Grabbable : MonoBehaviour
             ThumbnailContent.SetActive(true);
             UpdateScale();
         }
+    }
+
+    private void UpdateThumbScale()
+    {
+        float dist = (transform.position - ThumbnailBox.transform.position).magnitude;
+        float maxDist = fullContentScale.magnitude;
+        float lerpParam = Mathf.Clamp01(dist / maxDist);
+        transform.localScale = Vector3.Lerp(ThumbnailContent.transform.lossyScale, fullContentScale, lerpParam);
     }
 
     private void UpdateScale()
