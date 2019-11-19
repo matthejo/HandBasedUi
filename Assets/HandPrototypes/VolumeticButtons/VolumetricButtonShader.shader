@@ -2,7 +2,6 @@
 {
     Properties
     {
-		_Test("Test", Range(0, 1)) = .5
     }
     SubShader
     {
@@ -30,7 +29,7 @@
 				float3 objSpace : TEXCOORD1;
             };
 
-			float _Test;
+			float _FingerParam;
 
             v2f vert (appdata v)
             {
@@ -43,7 +42,7 @@
 
             fixed4 frag (v2f i) : SV_Target
             {
-				float pressVal = lerp(.5, -.5, _Test);
+				float pressVal = lerp(.5, -.5, _FingerParam);
 
 				float ret = i.objSpace.z;
 				clip(ret + pressVal);

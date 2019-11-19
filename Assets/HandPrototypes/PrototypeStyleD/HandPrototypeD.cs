@@ -89,7 +89,7 @@ public class HandPrototypeD : StandardHandPrototype
         }
         if(state == UiState.PanelsHovered)
         {
-            if(GrabDetector.Instance.Grabbing)
+            if(PinchDetector.Instance.Pinching)
             {
                 return;
             }

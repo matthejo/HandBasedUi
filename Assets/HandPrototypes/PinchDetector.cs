@@ -3,16 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrabDetector : MonoBehaviour
+public class PinchDetector : MonoBehaviour
 {
-    public float GrabDist = 0.03f;
-    public float UngrabDist = 0.09f;
+    public float PinchDist = 0.03f;
+    public float UnpinchDist = 0.09f;
     private HandPrototypeProxies proxies;
-    public static GrabDetector Instance;
+    public static PinchDetector Instance;
 
-    public bool Grabbing { get; private set; }
+    public bool Pinching { get; private set; }
 
-    public Transform GrabPoint { get; private set; }
+    public Transform PinchPoint { get; private set; }
 
     private void Awake()
     {
@@ -22,19 +22,19 @@ public class GrabDetector : MonoBehaviour
     private void Start()
     {
         proxies = HandPrototypeProxies.Instance;
-        GrabPoint = new GameObject("Pinch Point").transform;
+        PinchPoint = new GameObject("Pinch Point").transform;
     }
 
     private void Update()
     {
         float tipDistance = (proxies.RightIndex.transform.position - proxies.RightThumb.transform.position).magnitude;
-        if(Grabbing)
+        if(Pinching)
         {
-            Grabbing = tipDistance < UngrabDist;
+            Pinching = tipDistance < UnpinchDist;
         }
         else
         {
-            Grabbing = tipDistance < GrabDist;
+            Pinching = tipDistance < PinchDist;
         }
 
         UpdateGrabPoint();
@@ -44,7 +44,7 @@ public class GrabDetector : MonoBehaviour
     {
         Vector3 grabPos = (proxies.RightThumb.transform.position + proxies.RightIndex.transform.position) / 2;
 
-        GrabPoint.position = grabPos;
-        GrabPoint.rotation = proxies.RightPalm.rotation;
+        PinchPoint.position = grabPos;
+        PinchPoint.rotation = proxies.RightPalm.rotation;
     }
 }

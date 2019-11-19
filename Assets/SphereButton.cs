@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,10 +9,9 @@ public class SphereButton : MonoBehaviour
     private Material sphereMat;
     public MeshRenderer Sphere;
 
-    [Range(0, 1)]
-    public float Pressure;
-
     public Transform Finger;
+
+    public float MaxDist;
 
     private void Start()
     {
@@ -20,17 +20,38 @@ public class SphereButton : MonoBehaviour
 
     private void Update()
     {
-        float pressureCos = Mathf.Cos((.5f - Pressure) * Mathf.PI * 2);
-        float diskZ = Mathf.Lerp(-.5f, .5f, Pressure);
+        float fingerParam = GetFingerParam();
 
-        float scalePressure = Mathf.Abs(Pressure - .5f) * 2;
-        float diskScale = 1 - Mathf.Pow(scalePressure, Mathf.PI);
+        float diskZ = Mathf.Lerp(-.5f, .5f, fingerParam);
+
+
+        float diskScale = GetDiskScale(fingerParam);
+        
         Disk.localPosition = new Vector3(0, 0, diskZ);
         Disk.localScale = new Vector3(diskScale, diskScale, diskScale);
+
 
         transform.LookAt(Finger);
         transform.Rotate(0, 180, 0, Space.Self);
 
-        sphereMat.SetFloat("_Test", Pressure);
+        sphereMat.SetFloat("_FingerParam", fingerParam);
+    }
+
+    private float GetFingerParam()
+    {
+        Vector3 toFinger = transform.position - Finger.position;
+        float minDist = transform.localScale.x / 2;
+        float distLength = MaxDist - minDist;
+
+        float someOtherNumber = toFinger.magnitude - minDist;
+        someOtherNumber = Mathf.Max(0, someOtherNumber);
+        float ret = someOtherNumber / distLength;
+        return Mathf.Clamp01(ret);
+    }
+
+    private float GetDiskScale(float fingerParam)
+    {
+        float x = Mathf.Lerp(-1f, 1f, fingerParam);
+        return Mathf.Sqrt(1 - Mathf.Pow(x, 2)); 
     }
 }
