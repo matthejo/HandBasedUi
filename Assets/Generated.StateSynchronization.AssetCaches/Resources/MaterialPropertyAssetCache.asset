@@ -12,1792 +12,1042 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93de580ac7303fa43b2629ad89e36082, type: 3}
   m_Name: MaterialPropertyAssetCache
   m_EditorClassIdentifier: 
-  materialPropertyAssets:
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _Color
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _AlbedoAlphaMode
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _AlbedoAssignedAtRuntime
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _Cutoff
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _Metallic
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _Smoothness
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _EnableChannelMap
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _ChannelMap
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _EnableNormalMap
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _NormalMap
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _NormalMapScale
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _EnableEmission
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _EmissiveColor
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _EnableTriplanarMapping
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _EnableLocalSpaceTriplanarMapping
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _TriplanarMappingBlendSharpness
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _DirectionalLight
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _SpecularHighlights
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _SphericalHarmonics
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _Reflections
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _Refraction
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _RefractiveIndex
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _RimLight
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _RimColor
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _RimPower
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _VertexColors
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _VertexExtrusion
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _VertexExtrusionValue
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _VertexExtrusionSmoothNormals
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _BlendedClippingWidth
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _ClippingBorder
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _ClippingBorderWidth
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _ClippingBorderColor
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _NearPlaneFade
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _NearLightFade
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _FadeBeginDistance
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _FadeCompleteDistance
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _FadeMinValue
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _HoverLight
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _EnableHoverColorOverride
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _HoverColorOverride
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _ProximityLight
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _EnableProximityLightColorOverride
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _ProximityLightCenterColorOverride
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _ProximityLightMiddleColorOverride
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _ProximityLightOuterColorOverride
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _ProximityLightSubtractive
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _ProximityLightTwoSided
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _FluentLightIntensity
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _RoundCorners
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _RoundCornerRadius
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _RoundCornerMargin
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _BorderLight
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _BorderLightUsesHoverColor
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _BorderLightReplacesAlbedo
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _BorderLightOpaque
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _BorderWidth
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _BorderMinValue
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _EdgeSmoothingValue
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _BorderLightOpaqueAlpha
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _InnerGlow
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _InnerGlowColor
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _InnerGlowPower
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _Iridescence
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _IridescentSpectrumMap
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _IridescenceIntensity
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _IridescenceThreshold
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _IridescenceAngle
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _EnvironmentColoring
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _EnvironmentColorThreshold
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _EnvironmentColorIntensity
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _EnvironmentColorX
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _EnvironmentColorY
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _EnvironmentColorZ
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _Mode
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _CustomMode
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _SrcBlend
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _DstBlend
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _BlendOp
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _ZTest
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _ZWrite
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _ZOffsetFactor
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _ZOffsetUnits
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _ColorWriteMask
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _CullMode
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _RenderQueueOverride
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _InstancedColor
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _IgnoreZScale
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _Stencil
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _StencilReference
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _StencilComparison
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-    shaderName: Mixed Reality Toolkit/Standard
-    propertyName: _StencilOperation
-    propertyType: 2
-  - shader: {fileID: 10755, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Unlit/Color
-    propertyName: _Color
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _FaceColor
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _FaceDilate
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _OutlineColor
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _OutlineWidth
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _OutlineSoftness
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _UnderlayColor
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _UnderlayOffsetX
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _UnderlayOffsetY
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _UnderlayDilate
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _UnderlaySoftness
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _WeightNormal
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _WeightBold
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _ShaderFlags
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _ScaleRatioA
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _ScaleRatioB
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _ScaleRatioC
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _TextureWidth
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _TextureHeight
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _GradientScale
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _ScaleX
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _ScaleY
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _PerspectiveFilter
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _Sharpness
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _VertexOffsetX
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _VertexOffsetY
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _ClipRect
-    propertyType: 1
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _MaskSoftnessX
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _MaskSoftnessY
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _StencilComp
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _Stencil
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _StencilOp
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _StencilWriteMask
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _StencilReadMask
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _ColorMask
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
-    shaderName: Mixed Reality Toolkit/TextMeshPro
-    propertyName: _ZWrite
-    propertyType: 2
+  materialAssets:
+  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
+    shaderName: Autodesk Interactive
+    materialProperties:
+    - propertyName: _BumpMap
+      propertyType: 4
+    - propertyName: _BumpScale
+      propertyType: 2
+    - propertyName: _Color
+      propertyType: 0
+    - propertyName: _Cutoff
+      propertyType: 3
+    - propertyName: _DetailAlbedoMap
+      propertyType: 4
+    - propertyName: _DetailMask
+      propertyType: 4
+    - propertyName: _DetailNormalMap
+      propertyType: 4
+    - propertyName: _DetailNormalMapScale
+      propertyType: 2
+    - propertyName: _DstBlend
+      propertyType: 2
+    - propertyName: _EmissionColor
+      propertyType: 0
+    - propertyName: _EmissionMap
+      propertyType: 4
+    - propertyName: _Glossiness
+      propertyType: 3
+    - propertyName: _GlossyReflections
+      propertyType: 2
+    - propertyName: _MainTex
+      propertyType: 4
+    - propertyName: _Metallic
+      propertyType: 3
+    - propertyName: _MetallicGlossMap
+      propertyType: 4
+    - propertyName: _Mode
+      propertyType: 2
+    - propertyName: _OcclusionMap
+      propertyType: 4
+    - propertyName: _OcclusionStrength
+      propertyType: 3
+    - propertyName: _Parallax
+      propertyType: 3
+    - propertyName: _ParallaxMap
+      propertyType: 4
+    - propertyName: _SpecGlossMap
+      propertyType: 4
+    - propertyName: _SpecularHighlights
+      propertyType: 2
+    - propertyName: _SrcBlend
+      propertyType: 2
+    - propertyName: _UVSec
+      propertyType: 2
+    - propertyName: _ZWrite
+      propertyType: 2
+  - shader: {fileID: 4800000, guid: aef340cb91e534f40870ff658a7aecee, type: 3}
+    shaderName: Custom/InstancedSurfaceShader
+    materialProperties:
+    - propertyName: _Color
+      propertyType: 0
+    - propertyName: _Glossiness
+      propertyType: 3
+    - propertyName: _MainTex
+      propertyType: 4
+    - propertyName: _Metallic
+      propertyType: 3
+  - shader: {fileID: 4800000, guid: abcf973b8dc974208a882fe4b8c6b73f, type: 3}
+    shaderName: Custom/MobileARShadow
+    materialProperties: []
+  - shader: {fileID: 4800000, guid: 1e5df5a56a7624e0981993663cf33154, type: 3}
+    shaderName: Custom/MobileOcclusion
+    materialProperties: []
+  - shader: {fileID: 10101, guid: 0000000000000000e000000000000000, type: 0}
+    shaderName: GUI/Text Shader
+    materialProperties:
+    - propertyName: _Color
+      propertyType: 0
+    - propertyName: _MainTex
+      propertyType: 4
+  - shader: {fileID: 4800000, guid: d199a2ca60343bb49ad9a41ddb45a083, type: 3}
+    shaderName: Hidden/Instanced-Colored
+    materialProperties:
+    - propertyName: _Color
+      propertyType: 0
+    - propertyName: _Cull
+      propertyType: 2
+    - propertyName: _ZTest
+      propertyType: 2
+    - propertyName: _ZWrite
+      propertyType: 2
+  - shader: {fileID: 1, guid: 0000000000000000f000000000000000, type: 0}
+    shaderName: Legacy Shaders/Diffuse Fast
+    materialProperties:
+    - propertyName: _Color
+      propertyType: 0
+    - propertyName: _MainTex
+      propertyType: 4
+  - shader: {fileID: 200, guid: 0000000000000000f000000000000000, type: 0}
+    shaderName: Legacy Shaders/Particles/Additive
+    materialProperties:
+    - propertyName: _InvFade
+      propertyType: 3
+    - propertyName: _MainTex
+      propertyType: 4
+    - propertyName: _TintColor
+      propertyType: 0
   - shader: {fileID: 207, guid: 0000000000000000f000000000000000, type: 0}
     shaderName: Legacy Shaders/Particles/Alpha Blended Premultiply
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 207, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Legacy Shaders/Particles/Alpha Blended Premultiply
-    propertyName: _InvFade
-    propertyType: 3
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _Color
-    propertyType: 0
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _Cutoff
-    propertyType: 3
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _Glossiness
-    propertyType: 3
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _GlossMapScale
-    propertyType: 3
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _SmoothnessTextureChannel
-    propertyType: 2
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _Metallic
-    propertyType: 3
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _MetallicGlossMap
-    propertyType: 4
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _SpecularHighlights
-    propertyType: 2
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _GlossyReflections
-    propertyType: 2
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _BumpScale
-    propertyType: 2
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _BumpMap
-    propertyType: 4
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _Parallax
-    propertyType: 3
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _ParallaxMap
-    propertyType: 4
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _OcclusionStrength
-    propertyType: 3
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _OcclusionMap
-    propertyType: 4
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _EmissionColor
-    propertyType: 0
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _EmissionMap
-    propertyType: 4
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _DetailMask
-    propertyType: 4
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _DetailAlbedoMap
-    propertyType: 4
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _DetailNormalMapScale
-    propertyType: 2
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _DetailNormalMap
-    propertyType: 4
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _UVSec
-    propertyType: 2
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _Mode
-    propertyType: 2
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _SrcBlend
-    propertyType: 2
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _DstBlend
-    propertyType: 2
-  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard
-    propertyName: _ZWrite
-    propertyType: 2
+    materialProperties:
+    - propertyName: _InvFade
+      propertyType: 3
+    - propertyName: _MainTex
+      propertyType: 4
+  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
+    shaderName: Mixed Reality Toolkit/HandTriangles
+    materialProperties:
+    - propertyName: _Auto_Pulse_
+      propertyType: 2
+    - propertyName: _Color_Map_
+      propertyType: 4
+    - propertyName: _Desaturated_Intensity_
+      propertyType: 3
+    - propertyName: _Edge_Width_
+      propertyType: 3
+    - propertyName: _Fill_Color_
+      propertyType: 0
+    - propertyName: _Fill_Start_Time_
+      propertyType: 3
+    - propertyName: _Filter_Width_
+      propertyType: 3
+    - propertyName: _Flip_V_
+      propertyType: 2
+    - propertyName: _Intensity_
+      propertyType: 3
+    - propertyName: _Line_Color_
+      propertyType: 0
+    - propertyName: _Line_End_Time_
+      propertyType: 3
+    - propertyName: _Max_Hover_
+      propertyType: 3
+    - propertyName: _Max_In_Angle_
+      propertyType: 3
+    - propertyName: _Max_Out_Angle_
+      propertyType: 3
+    - propertyName: _Period_
+      propertyType: 2
+    - propertyName: _Pulse_
+      propertyType: 3
+    - propertyName: _Pulse_Amplify_Leading_
+      propertyType: 3
+    - propertyName: _Pulse_Color_Width_
+      propertyType: 3
+    - propertyName: _Pulse_Enabled_
+      propertyType: 2
+    - propertyName: _Pulse_Lead_Fuzz_
+      propertyType: 3
+    - propertyName: _Pulse_Line_Fuzz_
+      propertyType: 3
+    - propertyName: _Pulse_Noise_Frequency_
+      propertyType: 3
+    - propertyName: _Pulse_Origin_
+      propertyType: 1
+    - propertyName: _Pulse_Outer_Size_
+      propertyType: 3
+    - propertyName: _Pulse_Tail_Fuzz_
+      propertyType: 3
+    - propertyName: _Pulse_Vary_
+      propertyType: 3
+    - propertyName: _Pulse_Width_
+      propertyType: 3
+    - propertyName: _Vary_Color_
+      propertyType: 3
+    - propertyName: _Vary_UV_
+      propertyType: 3
+    - propertyName: _Wrist_Fade_End_
+      propertyType: 3
+    - propertyName: _Wrist_Fade_Start_
+      propertyType: 3
+    - propertyName: USE_ALBEDO_TEXTURE
+      propertyType: 2
+  - shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
+    shaderName: Mixed Reality Toolkit/Standard
+    materialProperties:
+    - propertyName: _AlbedoAlphaMode
+      propertyType: 2
+    - propertyName: _AlbedoAssignedAtRuntime
+      propertyType: 2
+    - propertyName: _BlendedClippingWidth
+      propertyType: 3
+    - propertyName: _BlendOp
+      propertyType: 2
+    - propertyName: _BorderLight
+      propertyType: 2
+    - propertyName: _BorderLightOpaque
+      propertyType: 2
+    - propertyName: _BorderLightOpaqueAlpha
+      propertyType: 3
+    - propertyName: _BorderLightReplacesAlbedo
+      propertyType: 2
+    - propertyName: _BorderLightUsesHoverColor
+      propertyType: 2
+    - propertyName: _BorderMinValue
+      propertyType: 3
+    - propertyName: _BorderWidth
+      propertyType: 3
+    - propertyName: _ChannelMap
+      propertyType: 4
+    - propertyName: _ClippingBorder
+      propertyType: 2
+    - propertyName: _ClippingBorderColor
+      propertyType: 0
+    - propertyName: _ClippingBorderWidth
+      propertyType: 3
+    - propertyName: _Color
+      propertyType: 0
+    - propertyName: _ColorWriteMask
+      propertyType: 2
+    - propertyName: _CullMode
+      propertyType: 2
+    - propertyName: _CustomMode
+      propertyType: 2
+    - propertyName: _Cutoff
+      propertyType: 3
+    - propertyName: _DirectionalLight
+      propertyType: 2
+    - propertyName: _DstBlend
+      propertyType: 2
+    - propertyName: _EdgeSmoothingValue
+      propertyType: 3
+    - propertyName: _EmissiveColor
+      propertyType: 0
+    - propertyName: _EnableChannelMap
+      propertyType: 2
+    - propertyName: _EnableEmission
+      propertyType: 2
+    - propertyName: _EnableHoverColorOverride
+      propertyType: 2
+    - propertyName: _EnableLocalSpaceTriplanarMapping
+      propertyType: 2
+    - propertyName: _EnableNormalMap
+      propertyType: 2
+    - propertyName: _EnableProximityLightColorOverride
+      propertyType: 2
+    - propertyName: _EnableTriplanarMapping
+      propertyType: 2
+    - propertyName: _EnvironmentColoring
+      propertyType: 2
+    - propertyName: _EnvironmentColorIntensity
+      propertyType: 3
+    - propertyName: _EnvironmentColorThreshold
+      propertyType: 3
+    - propertyName: _EnvironmentColorX
+      propertyType: 0
+    - propertyName: _EnvironmentColorY
+      propertyType: 0
+    - propertyName: _EnvironmentColorZ
+      propertyType: 0
+    - propertyName: _FadeBeginDistance
+      propertyType: 3
+    - propertyName: _FadeCompleteDistance
+      propertyType: 3
+    - propertyName: _FadeMinValue
+      propertyType: 3
+    - propertyName: _FluentLightIntensity
+      propertyType: 3
+    - propertyName: _HoverColorOverride
+      propertyType: 0
+    - propertyName: _HoverLight
+      propertyType: 2
+    - propertyName: _IgnoreZScale
+      propertyType: 2
+    - propertyName: _InnerGlow
+      propertyType: 2
+    - propertyName: _InnerGlowColor
+      propertyType: 0
+    - propertyName: _InnerGlowPower
+      propertyType: 3
+    - propertyName: _InstancedColor
+      propertyType: 2
+    - propertyName: _Iridescence
+      propertyType: 2
+    - propertyName: _IridescenceAngle
+      propertyType: 3
+    - propertyName: _IridescenceIntensity
+      propertyType: 3
+    - propertyName: _IridescenceThreshold
+      propertyType: 3
+    - propertyName: _IridescentSpectrumMap
+      propertyType: 4
+    - propertyName: _MainTex
+      propertyType: 4
+    - propertyName: _Metallic
+      propertyType: 3
+    - propertyName: _Mode
+      propertyType: 2
+    - propertyName: _NearLightFade
+      propertyType: 2
+    - propertyName: _NearPlaneFade
+      propertyType: 2
+    - propertyName: _NormalMap
+      propertyType: 4
+    - propertyName: _NormalMapScale
+      propertyType: 2
+    - propertyName: _ProximityLight
+      propertyType: 2
+    - propertyName: _ProximityLightCenterColorOverride
+      propertyType: 0
+    - propertyName: _ProximityLightMiddleColorOverride
+      propertyType: 0
+    - propertyName: _ProximityLightOuterColorOverride
+      propertyType: 0
+    - propertyName: _ProximityLightSubtractive
+      propertyType: 2
+    - propertyName: _ProximityLightTwoSided
+      propertyType: 2
+    - propertyName: _Reflections
+      propertyType: 2
+    - propertyName: _Refraction
+      propertyType: 2
+    - propertyName: _RefractiveIndex
+      propertyType: 3
+    - propertyName: _RenderQueueOverride
+      propertyType: 3
+    - propertyName: _RimColor
+      propertyType: 0
+    - propertyName: _RimLight
+      propertyType: 2
+    - propertyName: _RimPower
+      propertyType: 3
+    - propertyName: _RoundCornerMargin
+      propertyType: 3
+    - propertyName: _RoundCornerRadius
+      propertyType: 3
+    - propertyName: _RoundCorners
+      propertyType: 2
+    - propertyName: _Smoothness
+      propertyType: 3
+    - propertyName: _SpecularHighlights
+      propertyType: 2
+    - propertyName: _SphericalHarmonics
+      propertyType: 2
+    - propertyName: _SrcBlend
+      propertyType: 2
+    - propertyName: _Stencil
+      propertyType: 2
+    - propertyName: _StencilComparison
+      propertyType: 2
+    - propertyName: _StencilOperation
+      propertyType: 2
+    - propertyName: _StencilReference
+      propertyType: 3
+    - propertyName: _TriplanarMappingBlendSharpness
+      propertyType: 3
+    - propertyName: _VertexColors
+      propertyType: 2
+    - propertyName: _VertexExtrusion
+      propertyType: 2
+    - propertyName: _VertexExtrusionSmoothNormals
+      propertyType: 2
+    - propertyName: _VertexExtrusionValue
+      propertyType: 2
+    - propertyName: _ZOffsetFactor
+      propertyType: 2
+    - propertyName: _ZOffsetUnits
+      propertyType: 2
+    - propertyName: _ZTest
+      propertyType: 2
+    - propertyName: _ZWrite
+      propertyType: 2
   - shader: {fileID: 4800000, guid: 80c006b91733f1a4991c49af89321ecd, type: 3}
     shaderName: Mixed Reality Toolkit/Text3DShader
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: 80c006b91733f1a4991c49af89321ecd, type: 3}
-    shaderName: Mixed Reality Toolkit/Text3DShader
-    propertyName: _Cull
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 80c006b91733f1a4991c49af89321ecd, type: 3}
-    shaderName: Mixed Reality Toolkit/Text3DShader
-    propertyName: _Color
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: 80c006b91733f1a4991c49af89321ecd, type: 3}
-    shaderName: Mixed Reality Toolkit/Text3DShader
-    propertyName: _StencilComp
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 80c006b91733f1a4991c49af89321ecd, type: 3}
-    shaderName: Mixed Reality Toolkit/Text3DShader
-    propertyName: _Stencil
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 80c006b91733f1a4991c49af89321ecd, type: 3}
-    shaderName: Mixed Reality Toolkit/Text3DShader
-    propertyName: _StencilOp
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 80c006b91733f1a4991c49af89321ecd, type: 3}
-    shaderName: Mixed Reality Toolkit/Text3DShader
-    propertyName: _StencilWriteMask
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 80c006b91733f1a4991c49af89321ecd, type: 3}
-    shaderName: Mixed Reality Toolkit/Text3DShader
-    propertyName: _StencilReadMask
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 80c006b91733f1a4991c49af89321ecd, type: 3}
-    shaderName: Mixed Reality Toolkit/Text3DShader
-    propertyName: _ColorMask
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _FaceColor
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _FaceDilate
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _OutlineColor
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _OutlineWidth
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _OutlineSoftness
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _UnderlayColor
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _UnderlayOffsetX
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _UnderlayOffsetY
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _UnderlayDilate
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _UnderlaySoftness
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _WeightNormal
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _WeightBold
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _ShaderFlags
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _ScaleRatioA
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _ScaleRatioB
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _ScaleRatioC
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _TextureWidth
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _TextureHeight
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _GradientScale
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _ScaleX
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _ScaleY
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _PerspectiveFilter
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _VertexOffsetX
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _VertexOffsetY
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _ClipRect
-    propertyType: 1
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _MaskSoftnessX
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _MaskSoftnessY
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _StencilComp
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _Stencil
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _StencilOp
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _StencilWriteMask
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _StencilReadMask
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field
-    propertyName: _ColorMask
-    propertyType: 2
+    materialProperties:
+    - propertyName: _Color
+      propertyType: 0
+    - propertyName: _ColorMask
+      propertyType: 2
+    - propertyName: _Cull
+      propertyType: 2
+    - propertyName: _MainTex
+      propertyType: 4
+    - propertyName: _Stencil
+      propertyType: 2
+    - propertyName: _StencilComp
+      propertyType: 2
+    - propertyName: _StencilOp
+      propertyType: 2
+    - propertyName: _StencilReadMask
+      propertyType: 2
+    - propertyName: _StencilWriteMask
+      propertyType: 2
+  - shader: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
+    shaderName: Mixed Reality Toolkit/TextMeshPro
+    materialProperties:
+    - propertyName: _ClipRect
+      propertyType: 1
+    - propertyName: _ColorMask
+      propertyType: 2
+    - propertyName: _FaceColor
+      propertyType: 0
+    - propertyName: _FaceDilate
+      propertyType: 3
+    - propertyName: _GradientScale
+      propertyType: 2
+    - propertyName: _MainTex
+      propertyType: 4
+    - propertyName: _MaskSoftnessX
+      propertyType: 2
+    - propertyName: _MaskSoftnessY
+      propertyType: 2
+    - propertyName: _OutlineColor
+      propertyType: 0
+    - propertyName: _OutlineSoftness
+      propertyType: 3
+    - propertyName: _OutlineWidth
+      propertyType: 3
+    - propertyName: _PerspectiveFilter
+      propertyType: 3
+    - propertyName: _ScaleRatioA
+      propertyType: 2
+    - propertyName: _ScaleRatioB
+      propertyType: 2
+    - propertyName: _ScaleRatioC
+      propertyType: 2
+    - propertyName: _ScaleX
+      propertyType: 2
+    - propertyName: _ScaleY
+      propertyType: 2
+    - propertyName: _ShaderFlags
+      propertyType: 2
+    - propertyName: _Sharpness
+      propertyType: 3
+    - propertyName: _Stencil
+      propertyType: 2
+    - propertyName: _StencilComp
+      propertyType: 2
+    - propertyName: _StencilOp
+      propertyType: 2
+    - propertyName: _StencilReadMask
+      propertyType: 2
+    - propertyName: _StencilWriteMask
+      propertyType: 2
+    - propertyName: _TextureHeight
+      propertyType: 2
+    - propertyName: _TextureWidth
+      propertyType: 2
+    - propertyName: _UnderlayColor
+      propertyType: 0
+    - propertyName: _UnderlayDilate
+      propertyType: 3
+    - propertyName: _UnderlayOffsetX
+      propertyType: 3
+    - propertyName: _UnderlayOffsetY
+      propertyType: 3
+    - propertyName: _UnderlaySoftness
+      propertyType: 3
+    - propertyName: _VertexOffsetX
+      propertyType: 2
+    - propertyName: _VertexOffsetY
+      propertyType: 2
+    - propertyName: _WeightBold
+      propertyType: 2
+    - propertyName: _WeightNormal
+      propertyType: 2
+    - propertyName: _ZWrite
+      propertyType: 2
+  - shader: {fileID: 4800000, guid: 5c1653eb4e20b76499141de7bc57c063, type: 3}
+    shaderName: Mixed Reality Toolkit/Wireframe
+    materialProperties:
+    - propertyName: _BaseColor
+      propertyType: 0
+    - propertyName: _BlendOp
+      propertyType: 2
+    - propertyName: _ColorWriteMask
+      propertyType: 2
+    - propertyName: _CullMode
+      propertyType: 2
+    - propertyName: _CustomMode
+      propertyType: 2
+    - propertyName: _DstBlend
+      propertyType: 2
+    - propertyName: _Mode
+      propertyType: 2
+    - propertyName: _RenderQueueOverride
+      propertyType: 3
+    - propertyName: _SrcBlend
+      propertyType: 2
+    - propertyName: _WireColor
+      propertyType: 0
+    - propertyName: _WireThickness
+      propertyType: 3
+    - propertyName: _ZOffsetFactor
+      propertyType: 2
+    - propertyName: _ZOffsetUnits
+      propertyType: 2
+    - propertyName: _ZTest
+      propertyType: 2
+    - propertyName: _ZWrite
+      propertyType: 2
   - shader: {fileID: 10720, guid: 0000000000000000f000000000000000, type: 0}
     shaderName: Mobile/Particles/Additive
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _Color
-    propertyType: 0
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _Cutoff
-    propertyType: 3
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _Glossiness
-    propertyType: 3
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _GlossMapScale
-    propertyType: 3
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _SmoothnessTextureChannel
-    propertyType: 2
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _SpecColor
-    propertyType: 0
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _SpecGlossMap
-    propertyType: 4
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _SpecularHighlights
-    propertyType: 2
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _GlossyReflections
-    propertyType: 2
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _BumpScale
-    propertyType: 2
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _BumpMap
-    propertyType: 4
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _Parallax
-    propertyType: 3
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _ParallaxMap
-    propertyType: 4
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _OcclusionStrength
-    propertyType: 3
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _OcclusionMap
-    propertyType: 4
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _EmissionColor
-    propertyType: 0
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _EmissionMap
-    propertyType: 4
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _DetailMask
-    propertyType: 4
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _DetailAlbedoMap
-    propertyType: 4
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _DetailNormalMapScale
-    propertyType: 2
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _DetailNormalMap
-    propertyType: 4
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _UVSec
-    propertyType: 2
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _Mode
-    propertyType: 2
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _SrcBlend
-    propertyType: 2
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _DstBlend
-    propertyType: 2
-  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Standard (Specular setup)
-    propertyName: _ZWrite
-    propertyType: 2
-  - shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Sprites/Default
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Sprites/Default
-    propertyName: _Color
-    propertyType: 0
-  - shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Sprites/Default
-    propertyName: PixelSnap
-    propertyType: 2
-  - shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Sprites/Default
-    propertyName: _RendererColor
-    propertyType: 0
-  - shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Sprites/Default
-    propertyName: _Flip
-    propertyType: 1
-  - shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Sprites/Default
-    propertyName: _AlphaTex
-    propertyType: 4
-  - shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Sprites/Default
-    propertyName: _EnableExternalAlpha
-    propertyType: 2
+    materialProperties:
+    - propertyName: _MainTex
+      propertyType: 4
   - shader: {fileID: 10721, guid: 0000000000000000f000000000000000, type: 0}
     shaderName: Mobile/Particles/Alpha Blended
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 10101, guid: 0000000000000000e000000000000000, type: 0}
-    shaderName: GUI/Text Shader
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 10101, guid: 0000000000000000e000000000000000, type: 0}
-    shaderName: GUI/Text Shader
-    propertyName: _Color
-    propertyType: 0
-  - shader: {fileID: 200, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Legacy Shaders/Particles/Additive
-    propertyName: _TintColor
-    propertyType: 0
-  - shader: {fileID: 200, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Legacy Shaders/Particles/Additive
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 200, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Legacy Shaders/Particles/Additive
-    propertyName: _InvFade
-    propertyType: 3
-  - shader: {fileID: 10760, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: UI/Unlit/Transparent
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 10760, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: UI/Unlit/Transparent
-    propertyName: _Color
-    propertyType: 0
-  - shader: {fileID: 10760, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: UI/Unlit/Transparent
-    propertyName: _StencilComp
-    propertyType: 2
-  - shader: {fileID: 10760, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: UI/Unlit/Transparent
-    propertyName: _Stencil
-    propertyType: 2
-  - shader: {fileID: 10760, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: UI/Unlit/Transparent
-    propertyName: _StencilOp
-    propertyType: 2
-  - shader: {fileID: 10760, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: UI/Unlit/Transparent
-    propertyName: _StencilWriteMask
-    propertyType: 2
-  - shader: {fileID: 10760, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: UI/Unlit/Transparent
-    propertyName: _StencilReadMask
-    propertyType: 2
-  - shader: {fileID: 10760, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: UI/Unlit/Transparent
-    propertyName: _ColorMask
-    propertyType: 2
-  - shader: {fileID: 10760, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: UI/Unlit/Transparent
-    propertyName: _UseUIAlphaClip
-    propertyType: 2
+    materialProperties:
+    - propertyName: _MainTex
+      propertyType: 4
   - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
     shaderName: Particles/Standard Unlit
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _Color
-    propertyType: 0
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _Cutoff
-    propertyType: 3
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _BumpScale
-    propertyType: 2
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _BumpMap
-    propertyType: 4
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _EmissionColor
-    propertyType: 0
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _EmissionMap
-    propertyType: 4
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _DistortionStrength
-    propertyType: 2
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _DistortionBlend
-    propertyType: 3
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _SoftParticlesNearFadeDistance
-    propertyType: 2
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _SoftParticlesFarFadeDistance
-    propertyType: 2
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _CameraNearFadeDistance
-    propertyType: 2
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _CameraFarFadeDistance
-    propertyType: 2
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _Mode
-    propertyType: 2
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _ColorMode
-    propertyType: 2
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _FlipbookMode
-    propertyType: 2
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _LightingEnabled
-    propertyType: 2
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _DistortionEnabled
-    propertyType: 2
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _EmissionEnabled
-    propertyType: 2
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _BlendOp
-    propertyType: 2
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _SrcBlend
-    propertyType: 2
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _DstBlend
-    propertyType: 2
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _ZWrite
-    propertyType: 2
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _Cull
-    propertyType: 2
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _SoftParticlesEnabled
-    propertyType: 2
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _CameraFadingEnabled
-    propertyType: 2
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _SoftParticleFadeParams
-    propertyType: 1
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _CameraFadeParams
-    propertyType: 1
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _ColorAddSubDiff
-    propertyType: 1
-  - shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Particles/Standard Unlit
-    propertyName: _DistortionStrengthScaled
-    propertyType: 2
-  - shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: UI/Default
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: UI/Default
-    propertyName: _Color
-    propertyType: 0
-  - shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: UI/Default
-    propertyName: _StencilComp
-    propertyType: 2
-  - shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: UI/Default
-    propertyName: _Stencil
-    propertyType: 2
-  - shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: UI/Default
-    propertyName: _StencilOp
-    propertyType: 2
-  - shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: UI/Default
-    propertyName: _StencilWriteMask
-    propertyType: 2
-  - shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: UI/Default
-    propertyName: _StencilReadMask
-    propertyType: 2
-  - shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: UI/Default
-    propertyName: _ColorMask
-    propertyType: 2
-  - shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: UI/Default
-    propertyName: _UseUIAlphaClip
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 09271ea90658795478c384ac2892df4a, type: 3}
-    shaderName: Unlit/ButtonShader
-    propertyName: _Color
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Intensity_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Fill_Color_
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Line_Color_
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: USE_ALBEDO_TEXTURE
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Color_Map_
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Vary_UV_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Vary_Color_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Desaturated_Intensity_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Edge_Width_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Filter_Width_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Pulse_Enabled_
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Pulse_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Pulse_Width_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Pulse_Outer_Size_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Pulse_Lead_Fuzz_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Pulse_Tail_Fuzz_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Pulse_Vary_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Pulse_Line_Fuzz_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Pulse_Noise_Frequency_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Pulse_Origin_
-    propertyType: 1
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Pulse_Color_Width_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Pulse_Amplify_Leading_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Auto_Pulse_
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Period_
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Line_End_Time_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Fill_Start_Time_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Wrist_Fade_Start_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Wrist_Fade_End_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Flip_V_
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Max_Hover_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Max_In_Angle_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aca12b5bed90b92448a88757df739294, type: 3}
-    shaderName: Mixed Reality Toolkit/HandTriangles
-    propertyName: _Max_Out_Angle_
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aef340cb91e534f40870ff658a7aecee, type: 3}
-    shaderName: Custom/InstancedSurfaceShader
-    propertyName: _Color
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: aef340cb91e534f40870ff658a7aecee, type: 3}
-    shaderName: Custom/InstancedSurfaceShader
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: aef340cb91e534f40870ff658a7aecee, type: 3}
-    shaderName: Custom/InstancedSurfaceShader
-    propertyName: _Glossiness
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: aef340cb91e534f40870ff658a7aecee, type: 3}
-    shaderName: Custom/InstancedSurfaceShader
-    propertyName: _Metallic
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: a2434486c77830e47add184249e0aa8d, type: 3}
-    shaderName: Unlit/FakeVideoShader
-    propertyName: _Fade
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: a2434486c77830e47add184249e0aa8d, type: 3}
-    shaderName: Unlit/FakeVideoShader
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: a2434486c77830e47add184249e0aa8d, type: 3}
-    shaderName: Unlit/FakeVideoShader
-    propertyName: _Corners
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _FaceColor
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _FaceDilate
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _OutlineColor
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _OutlineWidth
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _OutlineSoftness
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _UnderlayColor
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _UnderlayOffsetX
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _UnderlayOffsetY
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _UnderlayDilate
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _UnderlaySoftness
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _WeightNormal
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _WeightBold
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _ShaderFlags
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _ScaleRatioA
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _ScaleRatioB
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _ScaleRatioC
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _TextureWidth
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _TextureHeight
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _GradientScale
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _ScaleX
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _ScaleY
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _PerspectiveFilter
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _VertexOffsetX
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _VertexOffsetY
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _ClipRect
-    propertyType: 1
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _MaskSoftnessX
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _MaskSoftnessY
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _StencilComp
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _Stencil
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _StencilOp
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _StencilWriteMask
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _StencilReadMask
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
-    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
-    propertyName: _ColorMask
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: ef7b8eec959eb4f1e9fa97bc86273848, type: 3}
-    shaderName: Unlit/ARCameraShader
-    propertyName: _textureY
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: ef7b8eec959eb4f1e9fa97bc86273848, type: 3}
-    shaderName: Unlit/ARCameraShader
-    propertyName: _textureCbCr
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: d199a2ca60343bb49ad9a41ddb45a083, type: 3}
-    shaderName: Hidden/Instanced-Colored
-    propertyName: _Color
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: d199a2ca60343bb49ad9a41ddb45a083, type: 3}
-    shaderName: Hidden/Instanced-Colored
-    propertyName: _ZWrite
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: d199a2ca60343bb49ad9a41ddb45a083, type: 3}
-    shaderName: Hidden/Instanced-Colored
-    propertyName: _ZTest
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: d199a2ca60343bb49ad9a41ddb45a083, type: 3}
-    shaderName: Hidden/Instanced-Colored
-    propertyName: _Cull
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5c1653eb4e20b76499141de7bc57c063, type: 3}
-    shaderName: Mixed Reality Toolkit/Wireframe
-    propertyName: _Mode
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5c1653eb4e20b76499141de7bc57c063, type: 3}
-    shaderName: Mixed Reality Toolkit/Wireframe
-    propertyName: _CustomMode
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5c1653eb4e20b76499141de7bc57c063, type: 3}
-    shaderName: Mixed Reality Toolkit/Wireframe
-    propertyName: _SrcBlend
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5c1653eb4e20b76499141de7bc57c063, type: 3}
-    shaderName: Mixed Reality Toolkit/Wireframe
-    propertyName: _DstBlend
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5c1653eb4e20b76499141de7bc57c063, type: 3}
-    shaderName: Mixed Reality Toolkit/Wireframe
-    propertyName: _BlendOp
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5c1653eb4e20b76499141de7bc57c063, type: 3}
-    shaderName: Mixed Reality Toolkit/Wireframe
-    propertyName: _ZTest
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5c1653eb4e20b76499141de7bc57c063, type: 3}
-    shaderName: Mixed Reality Toolkit/Wireframe
-    propertyName: _ZWrite
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5c1653eb4e20b76499141de7bc57c063, type: 3}
-    shaderName: Mixed Reality Toolkit/Wireframe
-    propertyName: _ZOffsetFactor
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5c1653eb4e20b76499141de7bc57c063, type: 3}
-    shaderName: Mixed Reality Toolkit/Wireframe
-    propertyName: _ZOffsetUnits
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5c1653eb4e20b76499141de7bc57c063, type: 3}
-    shaderName: Mixed Reality Toolkit/Wireframe
-    propertyName: _ColorWriteMask
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5c1653eb4e20b76499141de7bc57c063, type: 3}
-    shaderName: Mixed Reality Toolkit/Wireframe
-    propertyName: _CullMode
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: 5c1653eb4e20b76499141de7bc57c063, type: 3}
-    shaderName: Mixed Reality Toolkit/Wireframe
-    propertyName: _RenderQueueOverride
-    propertyType: 3
-  - shader: {fileID: 4800000, guid: 5c1653eb4e20b76499141de7bc57c063, type: 3}
-    shaderName: Mixed Reality Toolkit/Wireframe
-    propertyName: _BaseColor
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: 5c1653eb4e20b76499141de7bc57c063, type: 3}
-    shaderName: Mixed Reality Toolkit/Wireframe
-    propertyName: _WireColor
-    propertyType: 0
-  - shader: {fileID: 4800000, guid: 5c1653eb4e20b76499141de7bc57c063, type: 3}
-    shaderName: Mixed Reality Toolkit/Wireframe
-    propertyName: _WireThickness
-    propertyType: 3
-  - shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Unlit/Texture
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: b0afe19eb5a14bd4a804a6dcae920c15, type: 3}
-    shaderName: SV/RGBToYUV
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: b0afe19eb5a14bd4a804a6dcae920c15, type: 3}
-    shaderName: SV/RGBToYUV
-    propertyName: _Width
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: b0afe19eb5a14bd4a804a6dcae920c15, type: 3}
-    shaderName: SV/RGBToYUV
-    propertyName: _Height
-    propertyType: 2
-  - shader: {fileID: 1, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Legacy Shaders/Diffuse Fast
-    propertyName: _Color
-    propertyType: 0
-  - shader: {fileID: 1, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Legacy Shaders/Diffuse Fast
-    propertyName: _MainTex
-    propertyType: 4
+    materialProperties:
+    - propertyName: _BlendOp
+      propertyType: 2
+    - propertyName: _BumpMap
+      propertyType: 4
+    - propertyName: _BumpScale
+      propertyType: 2
+    - propertyName: _CameraFadeParams
+      propertyType: 1
+    - propertyName: _CameraFadingEnabled
+      propertyType: 2
+    - propertyName: _CameraFarFadeDistance
+      propertyType: 2
+    - propertyName: _CameraNearFadeDistance
+      propertyType: 2
+    - propertyName: _Color
+      propertyType: 0
+    - propertyName: _ColorAddSubDiff
+      propertyType: 1
+    - propertyName: _ColorMode
+      propertyType: 2
+    - propertyName: _Cull
+      propertyType: 2
+    - propertyName: _Cutoff
+      propertyType: 3
+    - propertyName: _DistortionBlend
+      propertyType: 3
+    - propertyName: _DistortionEnabled
+      propertyType: 2
+    - propertyName: _DistortionStrength
+      propertyType: 2
+    - propertyName: _DistortionStrengthScaled
+      propertyType: 2
+    - propertyName: _DstBlend
+      propertyType: 2
+    - propertyName: _EmissionColor
+      propertyType: 0
+    - propertyName: _EmissionEnabled
+      propertyType: 2
+    - propertyName: _EmissionMap
+      propertyType: 4
+    - propertyName: _FlipbookMode
+      propertyType: 2
+    - propertyName: _LightingEnabled
+      propertyType: 2
+    - propertyName: _MainTex
+      propertyType: 4
+    - propertyName: _Mode
+      propertyType: 2
+    - propertyName: _SoftParticleFadeParams
+      propertyType: 1
+    - propertyName: _SoftParticlesEnabled
+      propertyType: 2
+    - propertyName: _SoftParticlesFarFadeDistance
+      propertyType: 2
+    - propertyName: _SoftParticlesNearFadeDistance
+      propertyType: 2
+    - propertyName: _SrcBlend
+      propertyType: 2
+    - propertyName: _ZWrite
+      propertyType: 2
+  - shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+    shaderName: Sprites/Default
+    materialProperties:
+    - propertyName: _AlphaTex
+      propertyType: 4
+    - propertyName: _Color
+      propertyType: 0
+    - propertyName: _EnableExternalAlpha
+      propertyType: 2
+    - propertyName: _Flip
+      propertyType: 1
+    - propertyName: _MainTex
+      propertyType: 4
+    - propertyName: _RendererColor
+      propertyType: 0
+    - propertyName: PixelSnap
+      propertyType: 2
+  - shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+    shaderName: Standard
+    materialProperties:
+    - propertyName: _BumpMap
+      propertyType: 4
+    - propertyName: _BumpScale
+      propertyType: 2
+    - propertyName: _Color
+      propertyType: 0
+    - propertyName: _Cutoff
+      propertyType: 3
+    - propertyName: _DetailAlbedoMap
+      propertyType: 4
+    - propertyName: _DetailMask
+      propertyType: 4
+    - propertyName: _DetailNormalMap
+      propertyType: 4
+    - propertyName: _DetailNormalMapScale
+      propertyType: 2
+    - propertyName: _DstBlend
+      propertyType: 2
+    - propertyName: _EmissionColor
+      propertyType: 0
+    - propertyName: _EmissionMap
+      propertyType: 4
+    - propertyName: _Glossiness
+      propertyType: 3
+    - propertyName: _GlossMapScale
+      propertyType: 3
+    - propertyName: _GlossyReflections
+      propertyType: 2
+    - propertyName: _MainTex
+      propertyType: 4
+    - propertyName: _Metallic
+      propertyType: 3
+    - propertyName: _MetallicGlossMap
+      propertyType: 4
+    - propertyName: _Mode
+      propertyType: 2
+    - propertyName: _OcclusionMap
+      propertyType: 4
+    - propertyName: _OcclusionStrength
+      propertyType: 3
+    - propertyName: _Parallax
+      propertyType: 3
+    - propertyName: _ParallaxMap
+      propertyType: 4
+    - propertyName: _SmoothnessTextureChannel
+      propertyType: 2
+    - propertyName: _SpecularHighlights
+      propertyType: 2
+    - propertyName: _SrcBlend
+      propertyType: 2
+    - propertyName: _UVSec
+      propertyType: 2
+    - propertyName: _ZWrite
+      propertyType: 2
+  - shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
+    shaderName: Standard (Specular setup)
+    materialProperties:
+    - propertyName: _BumpMap
+      propertyType: 4
+    - propertyName: _BumpScale
+      propertyType: 2
+    - propertyName: _Color
+      propertyType: 0
+    - propertyName: _Cutoff
+      propertyType: 3
+    - propertyName: _DetailAlbedoMap
+      propertyType: 4
+    - propertyName: _DetailMask
+      propertyType: 4
+    - propertyName: _DetailNormalMap
+      propertyType: 4
+    - propertyName: _DetailNormalMapScale
+      propertyType: 2
+    - propertyName: _DstBlend
+      propertyType: 2
+    - propertyName: _EmissionColor
+      propertyType: 0
+    - propertyName: _EmissionMap
+      propertyType: 4
+    - propertyName: _Glossiness
+      propertyType: 3
+    - propertyName: _GlossMapScale
+      propertyType: 3
+    - propertyName: _GlossyReflections
+      propertyType: 2
+    - propertyName: _MainTex
+      propertyType: 4
+    - propertyName: _Mode
+      propertyType: 2
+    - propertyName: _OcclusionMap
+      propertyType: 4
+    - propertyName: _OcclusionStrength
+      propertyType: 3
+    - propertyName: _Parallax
+      propertyType: 3
+    - propertyName: _ParallaxMap
+      propertyType: 4
+    - propertyName: _SmoothnessTextureChannel
+      propertyType: 2
+    - propertyName: _SpecColor
+      propertyType: 0
+    - propertyName: _SpecGlossMap
+      propertyType: 4
+    - propertyName: _SpecularHighlights
+      propertyType: 2
+    - propertyName: _SrcBlend
+      propertyType: 2
+    - propertyName: _UVSec
+      propertyType: 2
+    - propertyName: _ZWrite
+      propertyType: 2
   - shader: {fileID: 4800000, guid: 0fa9e48777047104bb4bb8290d6be951, type: 3}
     shaderName: SV/AlphaBlend
-    propertyName: _BackTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: 0fa9e48777047104bb4bb8290d6be951, type: 3}
-    shaderName: SV/AlphaBlend
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: 0fa9e48777047104bb4bb8290d6be951, type: 3}
-    shaderName: SV/AlphaBlend
-    propertyName: _Alpha
-    propertyType: 2
+    materialProperties:
+    - propertyName: _Alpha
+      propertyType: 2
+    - propertyName: _BackTex
+      propertyType: 4
+    - propertyName: _MainTex
+      propertyType: 4
+  - shader: {fileID: 4800000, guid: d205647913a7f2247a941d09358bc180, type: 3}
+    shaderName: SV/BGRToRGB
+    materialProperties:
+    - propertyName: _AlphaScale
+      propertyType: 2
+    - propertyName: _MainTex
+      propertyType: 4
+    - propertyName: _YFlip
+      propertyType: 2
   - shader: {fileID: 4800000, guid: acab126297274c848beb9908fb34d939, type: 3}
     shaderName: SV/Downsample
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: acab126297274c848beb9908fb34d939, type: 3}
-    shaderName: SV/Downsample
-    propertyName: _HeightOffset
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: acab126297274c848beb9908fb34d939, type: 3}
-    shaderName: SV/Downsample
-    propertyName: _WidthOffset
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: c8a28ad8c8326d048a8a0af8fa87e004, type: 3}
-    shaderName: SV/HoloAlpha
-    propertyName: _BackTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: c8a28ad8c8326d048a8a0af8fa87e004, type: 3}
-    shaderName: SV/HoloAlpha
-    propertyName: _FronTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: c8a28ad8c8326d048a8a0af8fa87e004, type: 3}
-    shaderName: SV/HoloAlpha
-    propertyName: _Alpha
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: cfa72f94021f3764db7529b4130c022f, type: 3}
-    shaderName: Unlit/ActualPanelShader
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: 941c5282fb189a4488e0e77278feab21, type: 3}
-    shaderName: SV/QuadView
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: 941c5282fb189a4488e0e77278feab21, type: 3}
-    shaderName: SV/QuadView
-    propertyName: _HologramTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: 941c5282fb189a4488e0e77278feab21, type: 3}
-    shaderName: SV/QuadView
-    propertyName: _HologramAlphaTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: 941c5282fb189a4488e0e77278feab21, type: 3}
-    shaderName: SV/QuadView
-    propertyName: _CompositeTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: eea5640f3b88bc740b064fb8e21f7084, type: 3}
-    shaderName: SV/YUVToRGB
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: eea5640f3b88bc740b064fb8e21f7084, type: 3}
-    shaderName: SV/YUVToRGB
-    propertyName: _Width
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: eea5640f3b88bc740b064fb8e21f7084, type: 3}
-    shaderName: SV/YUVToRGB
-    propertyName: _Height
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: eea5640f3b88bc740b064fb8e21f7084, type: 3}
-    shaderName: SV/YUVToRGB
-    propertyName: _AlphaScale
-    propertyType: 2
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _Color
-    propertyType: 0
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _Cutoff
-    propertyType: 3
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _Glossiness
-    propertyType: 3
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _SpecGlossMap
-    propertyType: 4
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _Metallic
-    propertyType: 3
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _MetallicGlossMap
-    propertyType: 4
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _SpecularHighlights
-    propertyType: 2
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _GlossyReflections
-    propertyType: 2
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _BumpScale
-    propertyType: 2
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _BumpMap
-    propertyType: 4
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _Parallax
-    propertyType: 3
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _ParallaxMap
-    propertyType: 4
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _OcclusionStrength
-    propertyType: 3
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _OcclusionMap
-    propertyType: 4
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _EmissionColor
-    propertyType: 0
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _EmissionMap
-    propertyType: 4
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _DetailMask
-    propertyType: 4
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _DetailAlbedoMap
-    propertyType: 4
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _DetailNormalMapScale
-    propertyType: 2
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _DetailNormalMap
-    propertyType: 4
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _UVSec
-    propertyType: 2
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _Mode
-    propertyType: 2
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _SrcBlend
-    propertyType: 2
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _DstBlend
-    propertyType: 2
-  - shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-    shaderName: Autodesk Interactive
-    propertyName: _ZWrite
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: bd694db3311e85043ade9f089995566b, type: 3}
-    shaderName: SV/RGBToNV12
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: bd694db3311e85043ade9f089995566b, type: 3}
-    shaderName: SV/RGBToNV12
-    propertyName: _Width
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: bd694db3311e85043ade9f089995566b, type: 3}
-    shaderName: SV/RGBToNV12
-    propertyName: _Height
-    propertyType: 2
+    materialProperties:
+    - propertyName: _HeightOffset
+      propertyType: 2
+    - propertyName: _MainTex
+      propertyType: 4
+    - propertyName: _WidthOffset
+      propertyType: 2
   - shader: {fileID: 4800000, guid: 85fad1b1898fc6c43b34ef1668215c99, type: 3}
     shaderName: SV/ExtractAlpha
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: 57c2c07a0719d4fafab7a4f8a84d1767, type: 3}
-    shaderName: Unlit/ARCameraShader(Linear)
-    propertyName: _textureY
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: 57c2c07a0719d4fafab7a4f8a84d1767, type: 3}
-    shaderName: Unlit/ARCameraShader(Linear)
-    propertyName: _textureCbCr
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: 051477601ecce8f469d12ab97cab3e61, type: 3}
-    shaderName: Unlit/TetherShader
-    propertyName: _Color
-    propertyType: 0
+    materialProperties:
+    - propertyName: _MainTex
+      propertyType: 4
+  - shader: {fileID: 4800000, guid: c8a28ad8c8326d048a8a0af8fa87e004, type: 3}
+    shaderName: SV/HoloAlpha
+    materialProperties:
+    - propertyName: _Alpha
+      propertyType: 2
+    - propertyName: _BackTex
+      propertyType: 4
+    - propertyName: _FronTex
+      propertyType: 4
   - shader: {fileID: 4800000, guid: ea4b73caa6ce81141a44be6d0a0c6829, type: 3}
     shaderName: SV/IgnoreAlpha
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: d205647913a7f2247a941d09358bc180, type: 3}
-    shaderName: SV/BGRToRGB
-    propertyName: _MainTex
-    propertyType: 4
-  - shader: {fileID: 4800000, guid: d205647913a7f2247a941d09358bc180, type: 3}
-    shaderName: SV/BGRToRGB
-    propertyName: _AlphaScale
-    propertyType: 2
-  - shader: {fileID: 4800000, guid: d205647913a7f2247a941d09358bc180, type: 3}
-    shaderName: SV/BGRToRGB
-    propertyName: _YFlip
-    propertyType: 2
+    materialProperties:
+    - propertyName: _MainTex
+      propertyType: 4
+  - shader: {fileID: 4800000, guid: 941c5282fb189a4488e0e77278feab21, type: 3}
+    shaderName: SV/QuadView
+    materialProperties:
+    - propertyName: _CompositeTex
+      propertyType: 4
+    - propertyName: _HologramAlphaTex
+      propertyType: 4
+    - propertyName: _HologramTex
+      propertyType: 4
+    - propertyName: _MainTex
+      propertyType: 4
+  - shader: {fileID: 4800000, guid: bd694db3311e85043ade9f089995566b, type: 3}
+    shaderName: SV/RGBToNV12
+    materialProperties:
+    - propertyName: _Height
+      propertyType: 2
+    - propertyName: _MainTex
+      propertyType: 4
+    - propertyName: _Width
+      propertyType: 2
+  - shader: {fileID: 4800000, guid: b0afe19eb5a14bd4a804a6dcae920c15, type: 3}
+    shaderName: SV/RGBToYUV
+    materialProperties:
+    - propertyName: _Height
+      propertyType: 2
+    - propertyName: _MainTex
+      propertyType: 4
+    - propertyName: _Width
+      propertyType: 2
+  - shader: {fileID: 4800000, guid: a33973e857224c94aab81a7d7a5cd239, type: 3}
+    shaderName: SV/TextureClear
+    materialProperties: []
+  - shader: {fileID: 4800000, guid: eea5640f3b88bc740b064fb8e21f7084, type: 3}
+    shaderName: SV/YUVToRGB
+    materialProperties:
+    - propertyName: _AlphaScale
+      propertyType: 2
+    - propertyName: _Height
+      propertyType: 2
+    - propertyName: _MainTex
+      propertyType: 4
+    - propertyName: _Width
+      propertyType: 2
+  - shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    shaderName: TextMeshPro/Mobile/Distance Field
+    materialProperties:
+    - propertyName: _ClipRect
+      propertyType: 1
+    - propertyName: _ColorMask
+      propertyType: 2
+    - propertyName: _FaceColor
+      propertyType: 0
+    - propertyName: _FaceDilate
+      propertyType: 3
+    - propertyName: _GradientScale
+      propertyType: 2
+    - propertyName: _MainTex
+      propertyType: 4
+    - propertyName: _MaskSoftnessX
+      propertyType: 2
+    - propertyName: _MaskSoftnessY
+      propertyType: 2
+    - propertyName: _OutlineColor
+      propertyType: 0
+    - propertyName: _OutlineSoftness
+      propertyType: 3
+    - propertyName: _OutlineWidth
+      propertyType: 3
+    - propertyName: _PerspectiveFilter
+      propertyType: 3
+    - propertyName: _ScaleRatioA
+      propertyType: 2
+    - propertyName: _ScaleRatioB
+      propertyType: 2
+    - propertyName: _ScaleRatioC
+      propertyType: 2
+    - propertyName: _ScaleX
+      propertyType: 2
+    - propertyName: _ScaleY
+      propertyType: 2
+    - propertyName: _ShaderFlags
+      propertyType: 2
+    - propertyName: _Stencil
+      propertyType: 2
+    - propertyName: _StencilComp
+      propertyType: 2
+    - propertyName: _StencilOp
+      propertyType: 2
+    - propertyName: _StencilReadMask
+      propertyType: 2
+    - propertyName: _StencilWriteMask
+      propertyType: 2
+    - propertyName: _TextureHeight
+      propertyType: 2
+    - propertyName: _TextureWidth
+      propertyType: 2
+    - propertyName: _UnderlayColor
+      propertyType: 0
+    - propertyName: _UnderlayDilate
+      propertyType: 3
+    - propertyName: _UnderlayOffsetX
+      propertyType: 3
+    - propertyName: _UnderlayOffsetY
+      propertyType: 3
+    - propertyName: _UnderlaySoftness
+      propertyType: 3
+    - propertyName: _VertexOffsetX
+      propertyType: 2
+    - propertyName: _VertexOffsetY
+      propertyType: 2
+    - propertyName: _WeightBold
+      propertyType: 2
+    - propertyName: _WeightNormal
+      propertyType: 2
+  - shader: {fileID: 4800000, guid: 3e75ca7f2b50d2546b8ef4a7796f64ba, type: 3}
+    shaderName: TextMeshPro/Mobile/Distance Field Flashlight
+    materialProperties:
+    - propertyName: _ClipRect
+      propertyType: 1
+    - propertyName: _ColorMask
+      propertyType: 2
+    - propertyName: _FaceColor
+      propertyType: 0
+    - propertyName: _FaceDilate
+      propertyType: 3
+    - propertyName: _GradientScale
+      propertyType: 2
+    - propertyName: _MainTex
+      propertyType: 4
+    - propertyName: _MaskSoftnessX
+      propertyType: 2
+    - propertyName: _MaskSoftnessY
+      propertyType: 2
+    - propertyName: _OutlineColor
+      propertyType: 0
+    - propertyName: _OutlineSoftness
+      propertyType: 3
+    - propertyName: _OutlineWidth
+      propertyType: 3
+    - propertyName: _PerspectiveFilter
+      propertyType: 3
+    - propertyName: _ScaleRatioA
+      propertyType: 2
+    - propertyName: _ScaleRatioB
+      propertyType: 2
+    - propertyName: _ScaleRatioC
+      propertyType: 2
+    - propertyName: _ScaleX
+      propertyType: 2
+    - propertyName: _ScaleY
+      propertyType: 2
+    - propertyName: _ShaderFlags
+      propertyType: 2
+    - propertyName: _Stencil
+      propertyType: 2
+    - propertyName: _StencilComp
+      propertyType: 2
+    - propertyName: _StencilOp
+      propertyType: 2
+    - propertyName: _StencilReadMask
+      propertyType: 2
+    - propertyName: _StencilWriteMask
+      propertyType: 2
+    - propertyName: _TextureHeight
+      propertyType: 2
+    - propertyName: _TextureWidth
+      propertyType: 2
+    - propertyName: _UnderlayColor
+      propertyType: 0
+    - propertyName: _UnderlayDilate
+      propertyType: 3
+    - propertyName: _UnderlayOffsetX
+      propertyType: 3
+    - propertyName: _UnderlayOffsetY
+      propertyType: 3
+    - propertyName: _UnderlaySoftness
+      propertyType: 3
+    - propertyName: _VertexOffsetX
+      propertyType: 2
+    - propertyName: _VertexOffsetY
+      propertyType: 2
+    - propertyName: _WeightBold
+      propertyType: 2
+    - propertyName: _WeightNormal
+      propertyType: 2
+  - shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+    shaderName: UI/Default
+    materialProperties:
+    - propertyName: _Color
+      propertyType: 0
+    - propertyName: _ColorMask
+      propertyType: 2
+    - propertyName: _MainTex
+      propertyType: 4
+    - propertyName: _Stencil
+      propertyType: 2
+    - propertyName: _StencilComp
+      propertyType: 2
+    - propertyName: _StencilOp
+      propertyType: 2
+    - propertyName: _StencilReadMask
+      propertyType: 2
+    - propertyName: _StencilWriteMask
+      propertyType: 2
+    - propertyName: _UseUIAlphaClip
+      propertyType: 2
+  - shader: {fileID: 10760, guid: 0000000000000000f000000000000000, type: 0}
+    shaderName: UI/Unlit/Transparent
+    materialProperties:
+    - propertyName: _Color
+      propertyType: 0
+    - propertyName: _ColorMask
+      propertyType: 2
+    - propertyName: _MainTex
+      propertyType: 4
+    - propertyName: _Stencil
+      propertyType: 2
+    - propertyName: _StencilComp
+      propertyType: 2
+    - propertyName: _StencilOp
+      propertyType: 2
+    - propertyName: _StencilReadMask
+      propertyType: 2
+    - propertyName: _StencilWriteMask
+      propertyType: 2
+    - propertyName: _UseUIAlphaClip
+      propertyType: 2
+  - shader: {fileID: 4800000, guid: cfa72f94021f3764db7529b4130c022f, type: 3}
+    shaderName: Unlit/ActualPanelShader
+    materialProperties:
+    - propertyName: _MainTex
+      propertyType: 4
+  - shader: {fileID: 4800000, guid: ef7b8eec959eb4f1e9fa97bc86273848, type: 3}
+    shaderName: Unlit/ARCameraShader
+    materialProperties:
+    - propertyName: _textureCbCr
+      propertyType: 4
+    - propertyName: _textureY
+      propertyType: 4
+  - shader: {fileID: 4800000, guid: 57c2c07a0719d4fafab7a4f8a84d1767, type: 3}
+    shaderName: Unlit/ARCameraShader(Linear)
+    materialProperties:
+    - propertyName: _textureCbCr
+      propertyType: 4
+    - propertyName: _textureY
+      propertyType: 4
+  - shader: {fileID: 4800000, guid: 09271ea90658795478c384ac2892df4a, type: 3}
+    shaderName: Unlit/ButtonShader
+    materialProperties:
+    - propertyName: _Color
+      propertyType: 0
+  - shader: {fileID: 10755, guid: 0000000000000000f000000000000000, type: 0}
+    shaderName: Unlit/Color
+    materialProperties:
+    - propertyName: _Color
+      propertyType: 0
+  - shader: {fileID: 4800000, guid: a2434486c77830e47add184249e0aa8d, type: 3}
+    shaderName: Unlit/FakeVideoShader
+    materialProperties:
+    - propertyName: _Corners
+      propertyType: 2
+    - propertyName: _Fade
+      propertyType: 2
+    - propertyName: _MainTex
+      propertyType: 4
+  - shader: {fileID: 4800000, guid: 670cf42e9f10222458e91963749c9553, type: 3}
+    shaderName: Unlit/GrabbableOutlineShader
+    materialProperties: []
+  - shader: {fileID: 4800000, guid: 615b2e73cfa710b458352ebed902aceb, type: 3}
+    shaderName: Unlit/PreviewPanelShader
+    materialProperties: []
+  - shader: {fileID: 4800000, guid: ee0cbcda25a1ca347b3a18daa33268a2, type: 3}
+    shaderName: Unlit/ProtoCursorShader
+    materialProperties: []
+  - shader: {fileID: 4800000, guid: 051477601ecce8f469d12ab97cab3e61, type: 3}
+    shaderName: Unlit/TetherShader
+    materialProperties:
+    - propertyName: _Color
+      propertyType: 0
+  - shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+    shaderName: Unlit/Texture
+    materialProperties:
+    - propertyName: _MainTex
+      propertyType: 4
+  - shader: {fileID: 4800000, guid: a62d9973404486c408eca7f424595923, type: 3}
+    shaderName: Unlit/VolumetricButtonShader
+    materialProperties: []
+  - shader: {fileID: 15300, guid: 0000000000000000f000000000000000, type: 0}
+    shaderName: VR/SpatialMapping/Occlusion
+    materialProperties: []
