@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f6b15d8a719d94f9bcf7b7cd63e7d3, type: 3}
   m_Name: CustomShaderPropertyAssetCache
   m_EditorClassIdentifier: 
-  customGlobalShaderProperties: []
+  customGlobalShaderProperties:
+  - propertyName: _FingerPosition
+    propertyType: 1
   customInstanceShaderProperties: []
